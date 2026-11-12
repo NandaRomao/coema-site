@@ -184,3 +184,70 @@
   line-height: 1.35;
   color: var(--noite);
 }
+
+/* Seção 3: rotatividade */
+
+:root {
+  --papel-sombra: #f0e9da;
+}
+
+.rotatividade {
+  background-color: var(--papel-sombra);
+}
+
+.rotatividade__colunas {
+  display: grid;
+  gap: var(--espaco-4);
+}
+
+@media (min-width: 52rem) {
+  .rotatividade__colunas {
+    grid-template-columns: 1fr 1fr;
+    gap: var(--espaco-5);
+  }
+}
+
+.rotatividade__coluna--resposta {
+  padding: var(--espaco-3);
+  background-color: var(--papel);
+  border-radius: var(--raio);
+}
+
+.rotatividade__subtitulo {
+  margin-bottom: var(--espaco-3);
+  font-size: var(--titulo-3);
+  color: var(--noite);
+}
+
+/* Seção 4: solução */
+
+.solucao__fecho {
+  display: grid;
+  gap: var(--espaco-4);
+  align-items: center;
+  margin-top: var(--espaco-5);
+}
+
+@media (min-width: 52rem) {
+  .solucao__fecho {
+    grid-template-columns: 4fr 6fr;
+    gap: var(--espaco-5);
+  }
+}
+
+.solucao__figura {
+  max-width: 24rem;
+  margin-inline: auto;
+}
+
+.solucao__figura img {
+  width: 100%;
+  border-radius: var(--raio);
+}
+
+.solucao__principio {
+  font-family: var(--fonte-titulo);
+  font-size: var(--titulo-2);
+  line-height: 1.25;
+  color: var(--noite);
+}

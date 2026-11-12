@@ -1,0 +1,149 @@
+/* Listas com marcador */
+
+.lista {
+  display: grid;
+  gap: var(--espaco-2);
+  padding: 0;
+  list-style: none;
+}
+
+.lista li {
+  position: relative;
+  padding-left: 1.75rem;
+}
+
+.lista li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.6em;
+  width: 0.75rem;
+  height: 0.75rem;
+  border-radius: 50%;
+}
+
+.lista--problema li::before {
+  border: 2px solid var(--rose-escuro);
+}
+
+.lista--resposta li::before {
+  background-color: var(--mostarda);
+}
+
+/* Figura larga, centralizada */
+
+.figura-ampla {
+  max-width: 30rem;
+  margin: var(--espaco-5) auto 0;
+}
+
+.figura-ampla img {
+  width: 100%;
+  border-radius: var(--raio);
+}
+
+.figura-ampla figcaption,
+.solucao__figura figcaption {
+  margin-top: var(--espaco-1);
+  font-size: 0.875rem;
+  font-style: italic;
+  color: var(--indigo);
+}
+
+/* Pares "dificuldade e resposta" */
+
+.pares__paineis {
+  display: grid;
+  gap: var(--espaco-3);
+}
+
+.par {
+  padding: var(--espaco-3);
+  background-color: #fff;
+  border: 1px solid var(--lavanda-clara);
+  border-left: 4px solid var(--mostarda);
+  border-radius: var(--raio);
+}
+
+.par__dor {
+  font-size: 0.9375rem;
+  font-weight: 700;
+  color: var(--rose-escuro);
+}
+
+.par__numero {
+  font-family: var(--fonte-titulo);
+  font-weight: 400;
+  margin-right: 0.25rem;
+}
+
+.par__resposta {
+  margin-top: var(--espaco-1);
+  font-size: var(--titulo-3);
+  color: var(--noite);
+}
+
+.par__resposta + p {
+  margin-top: var(--espaco-2);
+  max-width: 38rem;
+}
+
+/* Modo abas: só em tela larga e com JavaScript */
+
+.pares__abas[hidden] {
+  display: none;
+}
+
+.pares--abas {
+  display: grid;
+  grid-template-columns: 5fr 7fr;
+  gap: var(--espaco-4);
+  align-items: start;
+}
+
+.pares--abas .pares__abas {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.pares__aba {
+  padding: 0.85rem 1rem;
+  background: none;
+  border: 0;
+  border-left: 3px solid var(--lavanda-clara);
+  color: var(--grafite);
+  font: inherit;
+  font-weight: 600;
+  text-align: left;
+  cursor: pointer;
+  transition: background-color 0.2s ease, border-color 0.2s ease;
+}
+
+.pares__aba:hover {
+  background-color: var(--papel-sombra);
+}
+
+.pares__aba[aria-selected="true"] {
+  background-color: var(--sol);
+  border-left-color: var(--rose-escuro);
+  color: var(--noite);
+}
+
+.pares--abas .par {
+  min-height: 16rem;
+  padding: var(--espaco-4);
+  animation: surgir 0.3s ease;
+}
+
+@keyframes surgir {
+  from {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
