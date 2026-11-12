@@ -86,3 +86,101 @@
   margin-top: var(--espaco-1);
   max-width: 60ch;
 }
+
+.abertura__link {
+  color: var(--sol);
+  font-weight: 600;
+}
+
+/* Seção 2: o problema */
+
+.dores {
+  display: grid;
+  gap: var(--espaco-5);
+  padding: 0;
+  list-style: none;
+}
+
+.dor {
+  display: grid;
+  gap: var(--espaco-3);
+  align-items: center;
+}
+
+.dor__texto {
+  max-width: 34rem;
+}
+
+.dor__texto p {
+  margin-top: var(--espaco-2);
+}
+
+.dor__numero {
+  display: block;
+  font-family: var(--fonte-titulo);
+  font-size: clamp(2.5rem, 2rem + 2vw, 3.75rem);
+  font-weight: 300;
+  line-height: 1;
+  color: var(--rose-escuro);
+}
+
+.dor__titulo {
+  margin-top: var(--espaco-1);
+  font-size: var(--titulo-3);
+  color: var(--noite);
+}
+
+.dor__figura {
+  max-width: 24rem;
+  margin-inline: auto;
+}
+
+.dor__figura img {
+  width: 100%;
+  border-radius: var(--raio);
+}
+
+.dor__figura figcaption {
+  margin-top: var(--espaco-1);
+  font-size: 0.875rem;
+  font-style: italic;
+  color: var(--indigo);
+}
+
+.dor--destaque {
+  padding: clamp(1.5rem, 1rem + 3vw, 3rem);
+  background-color: var(--lavanda-clara);
+  border-left: 4px solid var(--rose-escuro);
+  border-radius: var(--raio);
+}
+
+.dor--destaque .dor__texto {
+  max-width: 46rem;
+}
+
+@media (min-width: 52rem) {
+  .dor--com-imagem {
+    grid-template-columns: 1fr 1fr;
+    gap: var(--espaco-5);
+  }
+
+  .dor--invertida .dor__texto {
+    order: 2;
+  }
+
+  .dor__figura {
+    margin-inline: 0;
+    justify-self: center;
+  }
+}
+
+.problema__fecho {
+  margin-top: var(--espaco-5);
+  max-width: 40rem;
+  padding-top: var(--espaco-4);
+  border-top: 2px solid var(--mostarda);
+  font-family: var(--fonte-titulo);
+  font-size: var(--titulo-3);
+  line-height: 1.35;
+  color: var(--noite);
+}

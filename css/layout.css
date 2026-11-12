@@ -122,3 +122,32 @@
 .botao--contorno:hover {
   background-color: var(--indigo);
 }
+
+/* Estrutura comum das seções */
+
+.secao {
+  padding-block: var(--espaco-secao);
+}
+
+.secao__cabecalho {
+  max-width: 46rem;
+  margin-bottom: var(--espaco-5);
+}
+
+.secao__titulo {
+  margin-top: var(--espaco-1);
+  font-size: var(--titulo-2);
+  color: var(--noite);
+}
+
+.secao__intro {
+  margin-top: var(--espaco-3);
+  font-size: var(--texto-g);
+}
+
+.nota {
+  margin-top: var(--espaco-4);
+  max-width: 46rem;
+  font-size: 0.875rem;
+  color: var(--indigo);
+}
