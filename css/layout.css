@@ -1,0 +1,124 @@
+/* Container, cabeçalho e botões */
+
+.container {
+  width: min(100% - 2.5rem, var(--largura));
+  margin-inline: auto;
+}
+
+.cabecalho {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background-color: var(--noite);
+  border-bottom: 1px solid var(--indigo);
+}
+
+.cabecalho__interno {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  min-height: var(--altura-cabecalho);
+  gap: var(--espaco-2);
+}
+
+.cabecalho__marca {
+  font-family: var(--fonte-titulo);
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--papel);
+  text-decoration: none;
+}
+
+.cabecalho__botao {
+  display: none;
+  padding: 0.5rem 0.9rem;
+  background: none;
+  border: 1px solid var(--lavanda);
+  border-radius: var(--raio);
+  color: var(--papel);
+  font: inherit;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.menu__lista {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.25rem 1.5rem;
+  padding: 0;
+  list-style: none;
+}
+
+.menu__link {
+  display: block;
+  padding: 0.5rem 0;
+  color: var(--papel);
+  font-weight: 600;
+  text-decoration: none;
+  border-bottom: 2px solid transparent;
+  transition: border-color 0.2s ease;
+}
+
+.menu__link:hover,
+.menu__link--ativo {
+  border-bottom-color: var(--mostarda);
+}
+
+/* Sem JavaScript, o menu fica sempre visível. Com JavaScript, recolhe no celular. */
+@media (max-width: 47.99rem) {
+  .js .cabecalho__botao {
+    display: inline-block;
+  }
+
+  .js .menu {
+    display: none;
+    width: 100%;
+    padding-bottom: var(--espaco-2);
+  }
+
+  .js .menu--aberto {
+    display: block;
+  }
+
+  .js .menu__lista {
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .js .menu__link {
+    padding: 0.75rem 0;
+  }
+}
+
+.botao {
+  display: inline-block;
+  padding: 0.8rem 1.4rem;
+  border: 2px solid transparent;
+  border-radius: var(--raio);
+  font-weight: 700;
+  text-decoration: none;
+  transition: background-color 0.2s ease, color 0.2s ease, transform 0.2s ease;
+}
+
+.botao:hover {
+  transform: translateY(-2px);
+}
+
+.botao--sol {
+  background-color: var(--sol);
+  color: var(--noite);
+}
+
+.botao--sol:hover {
+  background-color: var(--mostarda);
+}
+
+.botao--contorno {
+  border-color: var(--lavanda);
+  color: var(--papel);
+}
+
+.botao--contorno:hover {
+  background-color: var(--indigo);
+}

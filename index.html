@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; font-src 'self'; media-src 'self'; connect-src 'self'; object-src 'none'; base-uri 'self'; form-action 'none'">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+
+  <title>Coema · Acompanhamento contínuo para quem vive com doença crônica autoimune</title>
+  <meta name="description" content="O Coema é um projeto acadêmico de acompanhamento contínuo para quem vive com doença crônica autoimune, começando pelo lúpus.">
+  <meta name="theme-color" content="#161C3D">
+
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="pt_BR">
+  <meta property="og:title" content="Coema · Já é dia">
+  <meta property="og:description" content="Acompanhamento contínuo para quem vive com doença crônica autoimune.">
+  <meta property="og:url" content="https://nandaromao.github.io/coema-site/">
+  <meta property="og:image" content="https://nandaromao.github.io/coema-site/img/cenas/capa-noite.webp">
+
+  <link rel="icon" href="img/favicon.svg" type="image/svg+xml">
+  <link rel="preload" href="fonts/fraunces.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/nunito-sans.woff2" as="font" type="font/woff2" crossorigin>
+
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/componentes.css">
+  <link rel="stylesheet" href="css/secoes.css">
+
+  <script type="module" src="js/main.js"></script>
+</head>
+<body>
+  <a class="pular" href="#conteudo">Pular para o conteúdo</a>
+
+  <header class="cabecalho">
+    <div class="container cabecalho__interno">
+      <a class="cabecalho__marca" href="#topo" aria-label="Coema, início da página">Coema</a>
+
+      <button class="cabecalho__botao" type="button" aria-expanded="false" aria-controls="menu-principal">
+        <span class="cabecalho__botao-texto">Menu</span>
+      </button>
+
+      <nav class="menu" id="menu-principal" aria-label="Seções da página">
+        <ul class="menu__lista">
+          <li><a class="menu__link" href="#problema">O problema</a></li>
+          <li><a class="menu__link" href="#solucao">A solução</a></li>
+          <li><a class="menu__link" href="#ia">A IA</a></li>
+          <li><a class="menu__link" href="#seguranca">Segurança</a></li>
+          <li><a class="menu__link" href="#diario">Diário</a></li>
+          <li><a class="menu__link" href="#equipe">Equipe</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="conteudo">
+
+    <!-- SEÇÃO 1: ABERTURA -->
+    <section class="abertura" id="topo" aria-labelledby="abertura-titulo">
+      <div class="container abertura__grade">
+        <div class="abertura__texto">
+          <p class="rotulo rotulo--claro">Projeto acadêmico · UNA · Ânima Lab HUB</p>
+          <h1 class="abertura__titulo" id="abertura-titulo">Coema</h1>
+          <p class="abertura__subtitulo">Já é dia.</p>
+          <p class="abertura__frase">Acompanhamento contínuo para quem vive com doença crônica autoimune.</p>
+          <p class="abertura__apoio">Entre uma consulta e outra podem passar meses. O Coema existe para que esse intervalo não seja atravessado sem ninguém olhando.</p>
+          <div class="abertura__acoes">
+            <a class="botao botao--sol" href="#problema">Entender o problema</a>
+            <a class="botao botao--contorno" href="#solucao">Ver a solução</a>
+          </div>
+        </div>
+
+        <figure class="abertura__video">
+          <video class="video" controls preload="metadata" playsinline width="1280" height="720" poster="video/poster.jpg">
+            <source src="video/coema-ja-e-dia.mp4" type="video/mp4">
+            <track kind="captions" src="video/coema-ja-e-dia.vtt" srclang="pt-BR" label="Português" default>
+            Seu navegador não reproduz este vídeo. Leia a transcrição logo abaixo.
+          </video>
+          <figcaption class="abertura__legenda">Coema: já é dia. Filme de 15 segundos.</figcaption>
+
+          <details class="transcricao">
+            <summary>Ler a transcrição do filme</summary>
+            <p>Quem vive com lúpus cuida de si todo dia. E tem dia em que a memória falha. Entre uma consulta e outra, passam meses. Nesse caminho, ninguém está olhando. O Coema acompanha esse intervalo e leva a história inteira para quem atende. Coema. Em tupi, amanhecer.</p>
+          </details>
+        </figure>
+      </div>
+    </section>
+
+    <!-- AS PRÓXIMAS SEÇÕES ENTRAM AQUI -->
+
+  </main>
+</body>
+</html>

@@ -1,0 +1,88 @@
+/* Seção 1: abertura */
+
+.abertura {
+  background-color: var(--noite);
+  background-image: linear-gradient(180deg, var(--noite) 0%, var(--indigo) 100%);
+  color: var(--papel);
+  padding-block: clamp(3rem, 2rem + 5vw, 6rem);
+}
+
+.abertura__grade {
+  display: grid;
+  gap: var(--espaco-4);
+  align-items: center;
+}
+
+@media (min-width: 60rem) {
+  .abertura__grade {
+    grid-template-columns: 5fr 7fr;
+    gap: var(--espaco-5);
+  }
+}
+
+.abertura__titulo {
+  margin-top: var(--espaco-2);
+  font-size: clamp(3.5rem, 2.5rem + 6vw, 6.5rem);
+  font-weight: 500;
+  letter-spacing: -0.02em;
+  line-height: 1;
+}
+
+.abertura__subtitulo {
+  margin-top: var(--espaco-1);
+  font-family: var(--fonte-titulo);
+  font-style: italic;
+  font-size: clamp(1.5rem, 1.2rem + 1.5vw, 2.25rem);
+  color: var(--sol);
+}
+
+.abertura__frase {
+  margin-top: var(--espaco-3);
+  font-size: var(--texto-g);
+  font-weight: 600;
+  max-width: 28ch;
+}
+
+.abertura__apoio {
+  margin-top: var(--espaco-2);
+  max-width: 44ch;
+  color: var(--lavanda-clara);
+}
+
+.abertura__acoes {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--espaco-2);
+  margin-top: var(--espaco-4);
+}
+
+.video {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  background-color: var(--noite);
+  border-radius: var(--raio);
+  box-shadow: 0 1.5rem 3rem rgb(0 0 0 / 0.35);
+}
+
+.abertura__legenda {
+  margin-top: var(--espaco-2);
+  font-size: 0.9375rem;
+  color: var(--lavanda-clara);
+}
+
+.transcricao {
+  margin-top: var(--espaco-1);
+  font-size: 0.9375rem;
+  color: var(--lavanda-clara);
+}
+
+.transcricao summary {
+  cursor: pointer;
+  color: var(--sol);
+  font-weight: 600;
+}
+
+.transcricao p {
+  margin-top: var(--espaco-1);
+  max-width: 60ch;
+}
