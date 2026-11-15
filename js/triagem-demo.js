@@ -24,6 +24,9 @@ function classificar({ estado, medicacao, sinal }) {
   if (estado === "mal" && sinal === "dor") {
     return { nivel: "vermelho", regra: "sentir-se mal com dor ou inchaço nas articulações leva a alerta." };
   }
+  if (estado === "mal" && sinal === "cansaco") {
+    return { nivel: "amarelo", regra: "sentir-se mal com cansaço fora do comum pede atenção." };
+  }
   if (estado === "mal") {
     return { nivel: "amarelo", regra: "sentir-se mal, mesmo sem outro sinal, pede atenção." };
   }

@@ -480,3 +480,91 @@
   font-style: italic;
   color: var(--indigo);
 }
+/* Grade de garantias (segurança) */
+
+.garantias {
+  display: grid;
+  gap: var(--espaco-4) var(--espaco-5);
+  padding: 0;
+  list-style: none;
+}
+
+@media (min-width: 40rem) {
+  .garantias {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 64rem) {
+  .garantias {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.garantia__icone {
+  color: var(--sol);
+}
+
+.garantia__titulo {
+  margin-top: var(--espaco-1);
+  font-size: 1.25rem;
+}
+
+.garantia__titulo + p {
+  margin-top: var(--espaco-1);
+  color: var(--lavanda-clara);
+}
+
+/* Fases do projeto */
+
+.fases {
+  display: grid;
+  gap: var(--espaco-3);
+  padding: 0;
+  list-style: none;
+}
+
+@media (min-width: 52rem) {
+  .fases {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.fase {
+  padding: var(--espaco-3);
+  border: 1px solid var(--lavanda-clara);
+  border-top: 4px solid var(--lavanda);
+  border-radius: var(--raio);
+}
+
+.fase--atual {
+  background-color: #fff;
+  border-top-color: var(--mostarda);
+}
+
+.fase__quando {
+  font-size: 0.8125rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--rose-escuro);
+}
+
+.fase__selo {
+  margin-left: 0.5rem;
+  padding: 0.15rem 0.6rem;
+  background-color: var(--sol);
+  border-radius: 999px;
+  letter-spacing: 0.04em;
+  color: var(--noite);
+}
+
+.fase__titulo {
+  margin-top: var(--espaco-1);
+  font-size: var(--titulo-3);
+  color: var(--noite);
+}
+
+.fase__titulo + p {
+  margin-top: var(--espaco-1);
+}

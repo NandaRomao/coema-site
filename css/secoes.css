@@ -296,3 +296,22 @@
   max-width: 46rem;
   font-size: var(--texto-g);
 }
+/* Seção 8: segurança, em fundo noite */
+
+.seguranca {
+  background-color: var(--noite);
+  color: var(--papel);
+}
+
+.seguranca .secao__titulo,
+.seguranca .garantia__titulo {
+  color: var(--papel);
+}
+
+.seguranca .secao__intro {
+  color: var(--lavanda-clara);
+}
+
+.nota--clara {
+  color: var(--lavanda-clara);
+}
