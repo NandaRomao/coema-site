@@ -109,7 +109,14 @@ function iniciarPares() {
   telaLarga.addEventListener("change", aplicar);
   aplicar();
 }
+// Rodapé: mantém o ano atualizado. Sem JavaScript, fica o ano escrito no HTML.
+function atualizarAno() {
+  const campo = document.querySelector("[data-ano]");
+  if (campo) campo.textContent = String(new Date().getFullYear());
+}
 
 iniciarMenu();
 iniciarPares();
 iniciarTriagemDemo();
+iniciarDiario();
+atualizarAno();

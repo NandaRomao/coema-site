@@ -315,3 +315,165 @@
 .nota--clara {
   color: var(--lavanda-clara);
 }
+/* Seção 11: equipe */
+
+.equipe {
+  background-color: var(--papel-sombra);
+}
+
+.equipe__grade {
+  display: grid;
+  gap: var(--espaco-4);
+}
+
+@media (min-width: 52rem) {
+  .equipe__grade {
+    grid-template-columns: 1fr 1fr;
+    gap: var(--espaco-5);
+  }
+}
+
+.equipe__subtitulo {
+  margin-bottom: var(--espaco-2);
+  font-size: var(--titulo-3);
+  color: var(--noite);
+}
+
+.equipe__lista,
+.equipe__links {
+  display: grid;
+  gap: var(--espaco-2);
+  padding: 0;
+  list-style: none;
+}
+
+.equipe__lista span {
+  display: block;
+  font-size: 0.9375rem;
+  color: var(--indigo);
+}
+
+.equipe .nota {
+  margin-top: var(--espaco-2);
+}
+
+/* Seção 12: por que o Coema existe (discreta) */
+
+.porque {
+  margin-top: var(--espaco-5);
+  padding-top: var(--espaco-3);
+  border-top: 1px solid var(--lavanda);
+  max-width: 44rem;
+}
+
+.porque summary {
+  cursor: pointer;
+  font-weight: 600;
+  color: var(--indigo);
+}
+
+.porque__conteudo {
+  margin-top: var(--espaco-2);
+}
+
+.porque__conteudo p + p {
+  margin-top: var(--espaco-2);
+}
+
+.porque__assinatura {
+  font-size: 0.9375rem;
+  color: var(--indigo);
+}
+
+/* Rodapé */
+
+.rodape {
+  background-color: var(--noite);
+  color: var(--lavanda-clara);
+}
+
+.rodape__imagem {
+  width: 100%;
+  height: clamp(14rem, 38vw, 26rem);
+  object-fit: cover;
+  object-position: center 60%;
+}
+
+.rodape__interno {
+  display: grid;
+  gap: var(--espaco-2);
+  padding-block: var(--espaco-4) var(--espaco-5);
+  font-size: 0.9375rem;
+}
+
+.rodape__marca {
+  font-family: var(--fonte-titulo);
+  font-size: var(--titulo-2);
+  line-height: 1.1;
+  color: var(--papel);
+}
+
+.rodape__marca em {
+  color: var(--sol);
+}
+
+.rodape__aviso {
+  max-width: 40rem;
+}
+
+.rodape__links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--espaco-1) var(--espaco-3);
+  margin-top: var(--espaco-1);
+  padding: 0;
+  list-style: none;
+}
+
+.rodape a {
+  color: var(--sol);
+}
+/* Arco de cor: do fim da noite (problema) ao amanhecer (solução) */
+
+.problema {
+  background-color: #eceaf1;
+}
+
+.rotatividade {
+  background-color: #e4e1ea;
+}
+
+.rotatividade__coluna--resposta {
+  background-color: #fff;
+}
+
+.solucao {
+  background-image: linear-gradient(
+    180deg,
+    var(--aurora) 0%,
+    var(--sol) 38%,
+    #fdf3d6 70%,
+    var(--papel) 100%
+  );
+}
+
+.funciona {
+  background-color: var(--papel);
+}
+
+.solucao .rotulo {
+  color: var(--noite);
+}
+
+.solucao .pares__aba {
+  border-left-color: var(--terracota);
+}
+
+.solucao .pares__aba:hover {
+  background-color: rgb(255 255 255 / 0.5);
+}
+
+.solucao .pares__aba[aria-selected="true"] {
+  background-color: #fff;
+  border-left-color: var(--rose-escuro);
+}
