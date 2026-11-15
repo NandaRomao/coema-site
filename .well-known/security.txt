@@ -1,0 +1,8 @@
+# Relatos de segurança do site do Projeto Coema
+# Por favor, relate falhas de forma privada pelo link abaixo, e não em issues públicas.
+
+Contact: https://github.com/NandaRomao/coema-site/security/advisories/new
+Expires: 2027-11-15T03:00:00.000Z
+Preferred-Languages: pt, en
+Canonical: https://nandaromao.github.io/coema-site/.well-known/security.txt
+Policy: https://github.com/NandaRomao/coema-site/blob/main/Aviso.md
