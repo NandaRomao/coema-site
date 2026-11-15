@@ -147,6 +147,7 @@
     transform: none;
   }
 }
+
 /* Lista "o que nunca faz" */
 
 .lista--nunca li::before {
@@ -314,6 +315,7 @@
 .exemplo__lista dd {
   margin: 0;
 }
+
 /* Cartões dos três níveis */
 
 .niveis {
@@ -330,6 +332,7 @@
 .nivel {
   padding: var(--espaco-3);
   background-color: #fff;
+  background-color: color-mix(in srgb, var(--cor-nivel) 12%, #fff);
   border: 1px solid var(--lavanda-clara);
   border-top: 8px solid var(--cor-nivel);
   border-radius: var(--raio);
@@ -453,14 +456,17 @@
 
 .resultado[data-nivel="verde"] {
   border-left-color: var(--verde);
+  background-color: color-mix(in srgb, var(--verde) 12%, #fff);
 }
 
 .resultado[data-nivel="amarelo"] {
   border-left-color: var(--amarelo);
+  background-color: color-mix(in srgb, var(--amarelo) 12%, #fff);
 }
 
 .resultado[data-nivel="vermelho"] {
   border-left-color: var(--vermelho);
+  background-color: color-mix(in srgb, var(--vermelho) 12%, #fff);
 }
 
 .resultado__nivel {
@@ -480,6 +486,7 @@
   font-style: italic;
   color: var(--indigo);
 }
+
 /* Grade de garantias (segurança) */
 
 .garantias {
@@ -567,4 +574,26 @@
 
 .fase__titulo + p {
   margin-top: var(--espaco-1);
+}
+
+/* Caixa de destaque: limites da IA */
+
+.limites {
+  margin-top: var(--espaco-5);
+  padding: var(--espaco-3) var(--espaco-4);
+  background-color: #fff;
+  border: 2px solid var(--rose-escuro);
+  border-left-width: 8px;
+  border-radius: var(--raio);
+}
+
+.limites__titulo {
+  margin-bottom: var(--espaco-2);
+  font-size: var(--titulo-3);
+  color: var(--rose-escuro);
+}
+
+.limites .lista {
+  font-weight: 600;
+  color: var(--noite);
 }
