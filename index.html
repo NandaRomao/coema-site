@@ -1,632 +1,1233 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pt-BR">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; font-src 'self'; media-src 'self'; connect-src 'self'; object-src 'none'; base-uri 'self'; form-action 'none'">
-  <meta name="referrer" content="strict-origin-when-cross-origin">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; font-src 'self'; media-src 'self'; connect-src 'self'; object-src 'none'; base-uri 'self'; form-action 'none'"
+    />
+    <meta name="referrer" content="strict-origin-when-cross-origin" />
 
-  <title>Coema · Acompanhamento contínuo para pacientes que vivem com doenças crônicas e autoimunes</title>
-  <meta name="description" content="O Coema é um projeto acadêmico de acompanhamento contínuo para quem vive com doenças crônicas autoimunes, tendo como caso referência o LES (Lúpus Eritematoso Sistêmico).">
-  <meta name="theme-color" content="#161C3D">
+    <title>
+      Coema · Acompanhamento contínuo para pacientes que vivem com doenças
+      crônicas e autoimunes
+    </title>
+    <meta
+      name="description"
+      content="O Coema é um projeto acadêmico de acompanhamento contínuo para quem vive com doenças crônicas autoimunes, tendo como caso referência o LES (Lúpus Eritematoso Sistêmico)."
+    />
+    <meta name="theme-color" content="#161C3D" />
 
-  <meta property="og:type" content="website">
-  <meta property="og:locale" content="pt_BR">
-  <meta property="og:title" content="Coema · Já é dia">
-  <meta property="og:description" content="Acompanhamento contínuo para quem vive com doença crônica autoimune.">
-  <meta property="og:url" content="https://nandaromao.github.io/coema-site/">
-  <meta property="og:image" content="https://nandaromao.github.io/coema-site/img/previa.jpg">
-  <meta name="twitter:card" content="summary_large_image">
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="pt_BR" />
+    <meta property="og:title" content="Coema · Já é dia" />
+    <meta
+      property="og:description"
+      content="Acompanhamento contínuo para quem vive com doença crônica autoimune."
+    />
+    <meta
+      property="og:url"
+      content="https://nandaromao.github.io/coema-site/"
+    />
+    <meta
+      property="og:image"
+      content="https://nandaromao.github.io/coema-site/img/previa.jpg"
+    />
+    <meta name="twitter:card" content="summary_large_image" />
 
-  <link rel="icon" href="img/favicon.svg" type="image/svg+xml">
-  <link rel="preload" href="fonts/fraunces.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="preload" href="fonts/nunito-sans.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="icon" href="img/favicon.svg" type="image/svg+xml" />
+    <link
+      rel="preload"
+      href="fonts/fraunces.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
+    <link
+      rel="preload"
+      href="fonts/nunito-sans.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
 
-  <link rel="stylesheet" href="css/base.css">
-  <link rel="stylesheet" href="css/layout.css">
-  <link rel="stylesheet" href="css/componentes.css">
-  <link rel="stylesheet" href="css/secoes.css">
+    <link rel="stylesheet" href="css/base.css" />
+    <link rel="stylesheet" href="css/layout.css" />
+    <link rel="stylesheet" href="css/componentes.css" />
+    <link rel="stylesheet" href="css/secoes.css" />
 
-  <script type="module" src="js/main.js"></script>
-</head>
-<body>
-  <a class="pular" href="#conteudo">Pular para o conteúdo</a>
+    <script type="module" src="js/main.js"></script>
+  </head>
+  <body>
+    <a class="pular" href="#conteudo">Pular para o conteúdo</a>
 
-  <header class="cabecalho">
-    <div class="container cabecalho__interno">
-      <a class="cabecalho__marca" href="#topo" aria-label="Coema, início da página">Coema</a>
+    <header class="cabecalho">
+      <div class="container cabecalho__interno">
+        <a
+          class="cabecalho__marca"
+          href="#topo"
+          aria-label="Coema, início da página"
+          >Coema</a
+        >
 
-      <button class="cabecalho__botao" type="button" aria-expanded="false" aria-controls="menu-principal">
-        <span class="cabecalho__botao-texto">Menu</span>
-      </button>
+        <button
+          class="cabecalho__botao"
+          type="button"
+          aria-expanded="false"
+          aria-controls="menu-principal"
+        >
+          <span class="cabecalho__botao-texto">Menu</span>
+        </button>
 
-      <nav class="menu" id="menu-principal" aria-label="Seções da página">
-        <ul class="menu__lista">
-          <li><a class="menu__link" href="#problema">O problema</a></li>
-          <li><a class="menu__link" href="#solucao">A solução</a></li>
-          <li><a class="menu__link" href="#ia">A IA</a></li>
-          <li><a class="menu__link" href="#seguranca">Segurança</a></li>
-          <li><a class="menu__link" href="#diario">Diário de Bordo</a></li>
-          <li><a class="menu__link" href="#equipe">Equipe</a></li>
-        </ul>
-      </nav>
-    </div>
-  </header>
-
-  <main id="conteudo">
-
-    <!-- SEÇÃO 1: ABERTURA -->
-    <section class="abertura" id="topo" aria-labelledby="abertura-titulo">
-      <div class="container abertura__grade">
-        <div class="abertura__texto">
-          <p class="rotulo rotulo--claro">Projeto em conjunto com o WayHub do Sistema Ânima de Educação</p>
-          <h1 class="abertura__titulo" id="abertura-titulo">Coema</h1>
-          <p class="abertura__subtitulo">Já é dia.</p>
-          <p class="abertura__frase">Acompanhamento contínuo para quem vive com doenças crônicas autoimunes.</p>
-          <p class="abertura__apoio">Entre uma consulta e outra podem passar meses. O Coema existe para que esse intervalo não seja atravessado sem ninguém olhando.</p>
-          <div class="abertura__acoes">
-            <a class="botao botao--sol" href="#problema">Entender o problema</a>
-            <a class="botao botao--contorno" href="#solucao">Ver a solução</a>
-          </div>
-        </div>
-
-        <figure class="abertura__video">
-          <video class="video" controls preload="metadata" playsinline width="1280" height="720" poster="video/poster.jpg">
-            <source src="video/coema-ja-e-dia.mp4" type="video/mp4">
-            <track kind="captions" src="video/coema-ja-e-dia.vtt" srclang="pt-BR" label="Português" default>
-            Seu navegador não reproduz este vídeo. Leia a transcrição logo abaixo.
-          </video>
-          <figcaption class="abertura__legenda">Coema: já é dia. Filme de 15 segundos.</figcaption>
-
-          <details class="transcricao">
-            <summary>Ler a transcrição do filme</summary>
-            <p>Quem vive com lúpus cuida de si todo dia. E tem dia em que a memória falha. Entre uma consulta e outra, passam meses. Nesse caminho, ninguém está olhando. O Coema acompanha esse intervalo e leva a história inteira para quem atende. Coema. Em tupi: já é dia.</p>".</p>
-          </details>
-        </figure>
+        <nav class="menu" id="menu-principal" aria-label="Seções da página">
+          <ul class="menu__lista">
+            <li><a class="menu__link" href="#problema">O problema</a></li>
+            <li><a class="menu__link" href="#solucao">A solução</a></li>
+            <li><a class="menu__link" href="#ia">A IA</a></li>
+            <li><a class="menu__link" href="#seguranca">Segurança</a></li>
+            <li><a class="menu__link" href="#diario">Diário de Bordo</a></li>
+            <li><a class="menu__link" href="#equipe">Equipe</a></li>
+          </ul>
+        </nav>
       </div>
-    </section>
+    </header>
 
-        <!-- SEÇÃO 2: O PROBLEMA -->
-    <section class="secao problema" id="problema" aria-labelledby="problema-titulo">
-      <div class="container">
-        <header class="secao__cabecalho">
-          <p class="rotulo">O problema</p>
-          <h2 class="secao__titulo" id="problema-titulo">Viver com uma doença que não tem pausa</h2>
-          <p class="secao__intro">Uma doença autoimune crônica não tem cura e não tem folga. O sistema de defesa passa a atacar o próprio corpo, em fases de crise e de calma que não avisam quando vão mudar. O lúpus é o caso que tomamos como referência, pois pode atingir vários órgãos e costuma exigir mais de um especialista.</p>
-        </header>
-
-        <ol class="dores">
-          <li class="dor dor--com-imagem">
-            <div class="dor__texto">
-              <span class="dor__numero" aria-hidden="true">01</span>
-              <h3 class="dor__titulo">O cuidado não tem folga</h3>
-              <p>Remédios em vários horários, exames periódicos, consultas com mais de um especialista, receitas que vencem. Gerir a própria doença é um trabalho diário, e quase ninguém vê.</p>
+    <main id="conteudo">
+      <!-- SEÇÃO 1: ABERTURA -->
+      <section class="abertura" id="topo" aria-labelledby="abertura-titulo">
+        <div class="container abertura__grade">
+          <div class="abertura__texto">
+            <p class="rotulo rotulo--claro">
+              Projeto em conjunto com o WayHub do Sistema Ânima de Educação
+            </p>
+            <h1 class="abertura__titulo" id="abertura-titulo">Coema</h1>
+            <p class="abertura__subtitulo">Já é dia.</p>
+            <p class="abertura__frase">
+              Acompanhamento contínuo para quem vive com doenças crônicas
+              autoimunes.
+            </p>
+            <p class="abertura__apoio">
+              Entre uma consulta e outra podem passar meses. O Coema existe para
+              que esse intervalo não seja atravessado sem ninguém olhando.
+            </p>
+            <div class="abertura__acoes">
+              <a class="botao botao--sol" href="#problema"
+                >Entender o problema</a
+              >
+              <a class="botao botao--contorno" href="#solucao">Ver a solução</a>
             </div>
-            <figure class="dor__figura">
-              <img src="img/cenas/rotina.webp" width="1200" height="1528" loading="lazy" decoding="async" alt="Ilustração a lápis de cor de uma mulher sentada à mesa da cozinha, de madrugada, segurando uma caneca diante de uma caixa organizadora de remédios.">
-              <figcaption>Lia, na cozinha, antes de amanhecer.</figcaption>
-            </figure>
-          </li>
-
-          <li class="dor dor--com-imagem dor--invertida">
-            <div class="dor__texto">
-              <span class="dor__numero" aria-hidden="true">02</span>
-              <h3 class="dor__titulo">A memória falha</h3>
-              <p>A doença e os tratamentos podem afetar memória e atenção. Perder um exame ou deixar uma receita vencer não é descuido: faz parte do quadro, e interrompe o tratamento.</p>
-            </div>
-            <figure class="dor__figura">
-              <img src="img/cenas/memoria.webp" width="1200" height="1307" loading="lazy" decoding="async" alt="Ilustração de uma mulher com a mão na testa diante de uma geladeira coberta de bilhetes e de um calendário com dias riscados.">
-              <figcaption>Bilhetes na geladeira nem sempre bastam.</figcaption>
-            </figure>
-          </li>
-
-          <li class="dor dor--com-imagem">
-            <div class="dor__texto">
-              <span class="dor__numero" aria-hidden="true">03</span>
-              <h3 class="dor__titulo">Meses sem ninguém olhando</h3>
-              <p>O retorno costuma ser marcado para meses depois. Nesse intervalo, o que a pessoa sente não chega a ninguém.</p>
-            </div>
-            <figure class="dor__figura">
-              <img src="img/cenas/caminho.webp" width="1200" height="1792" loading="lazy" decoding="async" alt="Ilustração de uma mulher pequena caminhando sozinha, à noite, por uma estrada feita de folhas de calendário, sob uma lua fina.">
-              <figcaption>O caminho até a próxima consulta.</figcaption>
-            </figure>
-          </li>
-
-          <li class="dor dor--destaque">
-            <div class="dor__texto">
-              <span class="dor__numero" aria-hidden="true">04</span>
-              <h3 class="dor__titulo">Sinais pequenos, danos grandes</h3>
-              <p>Dor, inchaço, febre e cansaço extremo parecem pouco no começo e podem ser o início de uma crise. Sem acompanhamento, a inflamação pode atingir rins, coração, pulmões, articulações e sistema nervoso, e deixar sequelas que poderiam ser evitadas.</p>
-            </div>
-          </li>
-
-          <li class="dor">
-            <div class="dor__texto">
-              <span class="dor__numero" aria-hidden="true">05</span>
-              <h3 class="dor__titulo">A cada atendimento, um profissional diferente</h3>
-              <p>Quando a equipe muda, parte da história clínica se perde. O paciente reconta tudo, e nem tudo é lembrado.</p>
-              <p><a href="#rotatividade">Leia mais sobre a rotatividade</a></p>
-            </div>
-          </li>
-
-          <li class="dor dor--com-imagem dor--invertida">
-            <div class="dor__texto">
-              <span class="dor__numero" aria-hidden="true">06</span>
-              <h3 class="dor__titulo">Na urgência, ninguém conhece o caso</h3>
-              <p>Quem atende num pronto-atendimento não tem o histórico e tem poucos minutos. Um sinal de alerta de uma doença complexa pode ser lido como algo simples.</p>
-            </div>
-            <figure class="dor__figura">
-              <img src="img/cenas/pronto-atendimento.webp" width="1200" height="1412" loading="lazy" decoding="async" alt="Ilustração de uma mulher sentada numa maca, segurando uma pasta de papéis, enquanto um médico de jaleco se afasta com uma prancheta.">
-              <figcaption>Papéis soltos não contam a história inteira.</figcaption>
-            </figure>
-          </li>
-
-          <li class="dor">
-            <div class="dor__texto">
-              <span class="dor__numero" aria-hidden="true">07</span>
-              <h3 class="dor__titulo">O peso de carregar tudo sozinho</h3>
-              <p>Repetir a própria história, lembrar de tudo e decidir sozinho quando procurar ajuda cansa e é insuficiente. Esse cansaço é uma das razões pelas quais tratamentos são abandonados.</p>
-            </div>
-          </li>
-        </ol>
-
-        <p class="problema__fecho">Essas sete dificuldades têm a mesma raiz. A informação existe, mas está espalhada, incompleta ou não chega a quem precisa dela, na hora em que precisa.</p>
-
-        <p class="nota">Conteúdo informativo, que não substitui a orientação de um profissional de saúde. Fontes: <a href="https://www.gov.br/saude/pt-br/assuntos/saude-de-a-a-z/l/lupus" target="_blank" rel="noopener noreferrer">Ministério da Saúde</a> e <a href="https://www.reumatologia.org.br" target="_blank" rel="noopener noreferrer">Sociedade Brasileira de Reumatologia</a>.</p>
-      </div>
-    </section>
-
-        <!-- SEÇÃO 3: A ROTATIVIDADE -->
-    <section class="secao rotatividade" id="rotatividade" aria-labelledby="rotatividade-titulo">
-      <div class="container">
-        <header class="secao__cabecalho">
-          <p class="rotulo">Continuidade do cuidado</p>
-          <h2 class="secao__titulo" id="rotatividade-titulo">Quando o médico muda, a história recomeça</h2>
-          <p class="secao__intro">Em muitos serviços de saúde, as equipes mudam com frequência. Quem trata uma doença por anos passa por vários profissionais, e o registro nem sempre acompanha o paciente.</p>
-        </header>
-
-        <div class="rotatividade__colunas">
-          <div class="rotatividade__coluna">
-            <h3 class="rotatividade__subtitulo">O que isso causa</h3>
-            <ul class="lista lista--problema">
-              <li>O paciente reconta tudo a cada consulta, e detalhes se perdem.</li>
-              <li>Exames já feitos são pedidos de novo.</li>
-              <li>Decisões são tomadas com informação parcial.</li>
-              <li>Mudanças lentas, que só aparecem comparando meses, passam despercebidas.</li>
-              <li>A confiança entre paciente e profissional recomeça do zero.</li>
-            </ul>
           </div>
 
-          <div class="rotatividade__coluna rotatividade__coluna--resposta">
-            <h3 class="rotatividade__subtitulo">Como o Coema responde</h3>
-            <ul class="lista lista--resposta">
-              <li>O histórico fica com o paciente e vai com ele a qualquer atendimento.</li>
-              <li>Uma linha do tempo organiza diagnósticos, exames, medicações, sintomas e alertas.</li>
-              <li>Um resumo do caso apresenta o essencial a quem atende pela primeira vez.</li>
-              <li>O paciente gera um token e o profissional abre o histórico no navegador, sem instalar nada.</li>
-              <li>Os alertas vão para a equipe, a unidade de acompanhamento ou o profissional responsável, e não apenas para uma pessoa específica. Por isso não se perdem quando alguém sai.</li>
-            </ul>
-          </div>
-        </div>
+          <figure class="abertura__video">
+            <video
+              class="video"
+              controls
+              preload="metadata"
+              playsinline
+              width="1280"
+              height="720"
+              poster="video/poster.jpg"
+            >
+              <source src="video/coema-ja-e-dia.mp4" type="video/mp4" />
+              <track
+                kind="captions"
+                src="video/coema-ja-e-dia.vtt"
+                srclang="pt-BR"
+                label="Português"
+                default
+              />
+              Seu navegador não reproduz este vídeo. Leia a transcrição logo
+              abaixo.
+            </video>
+            <figcaption class="abertura__legenda">
+              Coema: já é dia. Filme de 15 segundos.
+            </figcaption>
 
-        <figure class="figura-ampla">
-          <img src="img/cenas/consulta.webp" width="1200" height="1448" loading="lazy" decoding="async" alt="Ilustração de uma médica sentada ao lado de uma paciente, lendo com atenção o resumo do caso na tela de um celular.">
-          <figcaption>Com o histórico em mãos, a consulta começa de onde a anterior parou.</figcaption>
-        </figure>
-      </div>
-    </section>
-
-       <!-- SEÇÃO 4: A SOLUÇÃO -->
-    <section class="secao solucao" id="solucao" aria-labelledby="solucao-titulo">
-      <div class="container">
-        <header class="secao__cabecalho">
-          <p class="rotulo">A solução</p>
-          <h2 class="secao__titulo" id="solucao-titulo">Para cada dificuldade, uma resposta</h2>
-          <p class="secao__intro">O Coema transforma o cuidado diário do paciente em acompanhamento contínuo, sem trabalho extra para ele nem para a equipe.</p>
-        </header>
-
-        <div class="pares" data-pares>
-          <div class="pares__abas" role="tablist" aria-orientation="vertical" aria-label="Dificuldades" hidden></div>
-
-          <div class="pares__paineis">
-            <article class="par" id="par-1">
-              <p class="par__dor"><span class="par__numero">01</span> O cuidado não tem folga</p>
-              <h3 class="par__resposta">Rotina em um só lugar</h3>
-              <p>Medicações organizadas por horário, exames, consultas e receitas reunidos e visíveis.</p>
-            </article>
-
-            <article class="par" id="par-2">
-              <p class="par__dor"><span class="par__numero">02</span> A memória falha</p>
-              <h3 class="par__resposta">Lembretes com antecedência</h3>
-              <p>O aviso começa um mês antes e se repete: quinze dias, uma semana, três dias, véspera e horas antes. O som é discreto, e um segundo lembrete, mais suave, aparece se o primeiro passar.</p>
-            </article>
-
-            <article class="par" id="par-3">
-              <p class="par__dor"><span class="par__numero">03</span> Meses sem ninguém olhando</p>
-              <h3 class="par__resposta">Check-in diário</h3>
-              <p>Um registro rápido de como a pessoa está, parecido com um caderno de humor. Só pede detalhes quando algo relevante acontece.</p>
-            </article>
-
-            <article class="par" id="par-4">
-              <p class="par__dor"><span class="par__numero">04</span> Sinais pequenos, danos grandes</p>
-              <h3 class="par__resposta">Triagem em três níveis</h3>
-              <p>O sistema percebe desvios cedo e indica o que fazer, antes que virem crise.</p>
-            </article>
-
-            <article class="par" id="par-5">
-              <p class="par__dor"><span class="par__numero">05</span> Um profissional diferente a cada vez</p>
-              <h3 class="par__resposta">Histórico com o paciente</h3>
-              <p>A história clínica completa, aberta por token a quem estiver atendendo.</p>
-            </article>
-
-            <article class="par" id="par-6">
-              <p class="par__dor"><span class="par__numero">06</span> Na urgência, ninguém conhece o caso</p>
-              <h3 class="par__resposta">Resumo e cartão de emergência</h3>
-              <p>Um resumo do quadro pronto para mostrar e um cartão com diagnóstico, alergias, medicações e contato, disponível mesmo sem internet.</p>
-            </article>
-
-            <article class="par" id="par-7">
-              <p class="par__dor"><span class="par__numero">07</span> O peso de carregar tudo sozinho</p>
-              <h3 class="par__resposta">Rede de apoio</h3>
-              <p>Um contato de confiança é avisado em situação de risco, e um cuidador pode registrar e consultar informações quando o paciente não estiver em condições.</p>
-            </article>
-          </div>
-        </div>
-
-        <div class="solucao__fecho">
-          <figure class="solucao__figura">
-            <img src="img/cenas/amanhecer.webp" width="1200" height="1564" loading="lazy" decoding="async" alt="Ilustração de uma mulher sorrindo para o celular, sentada junto a uma janela, com a luz do amanhecer entrando.">
-            <figcaption>Um registro por dia, e alguém passa a acompanhar.</figcaption>
+            <details class="transcricao">
+              <summary>Ler a transcrição do filme</summary>
+              <p>
+                Quem vive com lúpus cuida de si todo dia. E tem dia em que a
+                memória falha. Entre uma consulta e outra, passam meses. Nesse
+                caminho, ninguém está olhando. O Coema acompanha esse intervalo
+                e leva a história inteira para quem atende. Coema. Em tupi: já é
+                dia.
+              </p>
+              ".
+            </details>
           </figure>
-          <p class="solucao__principio">O Coema existe para acompanhar, não para vigiar. Cada decisão de desenho procura reduzir culpa, esforço e carga mental.</p>
         </div>
-      </div>
-    </section>
+      </section>
 
-        <!-- SEÇÃO 5: COMO FUNCIONA -->
-    <section class="secao funciona" id="como-funciona" aria-labelledby="funciona-titulo">
-      <div class="container">
-        <header class="secao__cabecalho">
-          <p class="rotulo">Como funciona</p>
-          <h2 class="secao__titulo" id="funciona-titulo">Um minuto por dia</h2>
-        </header>
+      <!-- SEÇÃO 2: O PROBLEMA -->
+      <section
+        class="secao problema"
+        id="problema"
+        aria-labelledby="problema-titulo"
+      >
+        <div class="container">
+          <header class="secao__cabecalho">
+            <p class="rotulo">O problema</p>
+            <h2 class="secao__titulo" id="problema-titulo">
+              Viver com uma doença que não tem pausa
+            </h2>
+            <p class="secao__intro">
+              Uma doença autoimune crônica não tem cura e não tem folga. O
+              sistema de defesa passa a atacar o próprio corpo, em fases de
+              crise e de calma que não avisam quando vão mudar. O lúpus é o caso
+              que tomamos como referência, pois pode atingir vários órgãos e
+              costuma exigir mais de um especialista.
+            </p>
+          </header>
 
-        <ol class="passos">
-          <li class="passo">
-            <span class="passo__numero" aria-hidden="true">1</span>
-            <h3 class="passo__titulo">O paciente registra</h3>
-            <p>Um check-in rápido: como está hoje, se tomou a medicação, se notou algo diferente.</p>
-          </li>
-          <li class="passo">
-            <span class="passo__numero" aria-hidden="true">2</span>
-            <h3 class="passo__titulo">O sistema organiza</h3>
-            <p>O relato vira registro estruturado e passa pelas regras de triagem.</p>
-          </li>
-          <li class="passo">
-            <span class="passo__numero" aria-hidden="true">3</span>
-            <h3 class="passo__titulo">A pessoa certa é avisada</h3>
-            <p>Na maior parte dos dias, ninguém precisa fazer nada. Quando precisa, o aviso chega a quem pode agir.</p>
-          </li>
-        </ol>
-      </div>
-    </section>
-
-    <!-- SEÇÃO 6: A IA -->
-    <section class="secao ia" id="ia" aria-labelledby="ia-titulo">
-      <div class="container">
-        <header class="secao__cabecalho">
-          <p class="rotulo">Inteligência artificial</p>
-          <h2 class="secao__titulo" id="ia-titulo">A IA escuta e organiza. Não diagnostica.</h2>
-          <p class="secao__intro">No Coema, a inteligência artificial tem uma função delimitada: conversar com o paciente e transformar o que ele conta em informação organizada. Ela não decide a gravidade de nada e não substitui nenhum profissional.</p>
-        </header>
-
-        <div class="ia__grade">
-          <div class="ia__coluna">
-            <h3 class="ia__subtitulo">Como separamos o que é sintoma do que não é</h3>
-            <p>Quem convive com uma doença crônica conta o dia inteiro, não uma lista de sintomas. No mesmo relato cabem uma dor nova, uma noite mal dormida e uma semana difícil no trabalho. O caminho proposto é este:</p>
-
-            <ol class="etapas">
-              <li class="etapa">
-                <h4 class="etapa__titulo">Relato livre</h4>
-                <p>A pessoa escreve ou responde com as próprias palavras, sem formulário longo.</p>
-              </li>
-              <li class="etapa">
-                <h4 class="etapa__titulo">Comparação com uma lista fechada</h4>
-                <p>A IA procura no relato apenas os sinais de uma lista definida e revisada por profissionais de saúde. Ela não cria categorias novas.</p>
-              </li>
-              <li class="etapa">
-                <h4 class="etapa__titulo">Registro estruturado</h4>
-                <p>O que corresponde à lista vira um registro com quatro campos: o quê, onde, desde quando e com que intensidade.</p>
-              </li>
-              <li class="etapa">
-                <h4 class="etapa__titulo">O restante continua sendo do paciente</h4>
-                <p>O que não é sinal clínico fica guardado como anotação pessoal. Dá contexto à consulta, mas não entra na triagem.</p>
-              </li>
-              <li class="etapa">
-                <h4 class="etapa__titulo">Confirmação</h4>
-                <p>Antes de salvar, a IA mostra o que entendeu, em linguagem simples, e a pessoa confirma ou corrige.</p>
-              </li>
-              <li class="etapa">
-                <h4 class="etapa__titulo">Na dúvida, pergunta</h4>
-                <p>Se o relato é ambíguo, a IA faz uma pergunta objetiva. Ela nunca presume.</p>
-              </li>
-              <li class="etapa">
-                <h4 class="etapa__titulo">Só então, as regras</h4>
-                <p>Apenas os sinais confirmados pelo paciente seguem para a triagem.</p>
-              </li>
-            </ol>
-          </div>
-
-          <div class="ia__coluna">
-            <div class="exemplo">
-              <p class="exemplo__rotulo">Exemplo fictício</p>
-
-              <h4 class="exemplo__titulo">O que a pessoa escreveu</h4>
-              <p class="exemplo__fala">Dormi mal, briguei com minha irmã e acordei com as mãos inchadas e doendo.</p>
-
-              <h4 class="exemplo__titulo">O que o Coema registrou</h4>
-              <dl class="exemplo__lista">
-                <dt>Sinal</dt>
-                <dd>Inchaço e dor nas mãos, desde hoje pela manhã, intensidade a confirmar.</dd>
-                <dt>Pergunta feita</dt>
-                <dd>De 0 a 10, quanto dói?</dd>
-                <dt>Anotação pessoal</dt>
-                <dd>Noite mal dormida; dia de conflito familiar.</dd>
-              </dl>
-            </div>
-
-            <p class="nota">Este é o desenho proposto. A lista de sinais e os critérios serão definidos e validados com profissionais de saúde antes de qualquer uso real.</p>
-
-            <div class="limites">
-              <h3 class="limites__titulo">O que a IA nunca faz</h3>
-              <ul class="lista lista--nunca">
-                <li>Não dá diagnóstico.</li>
-                <li>Não classifica a gravidade.</li>
-                <li>Não indica nem altera medicação.</li>
-                <li>Não interpreta exames.</li>
-                <li>Não substitui consulta nem atendimento de urgência.</li>
-              </ul>
-            </div>
-        </div>
-      </div>
-    </section>
-
-        <!-- SEÇÃO 7: A TRIAGEM -->
-    <section class="secao triagem" id="triagem" aria-labelledby="triagem-titulo">
-      <div class="container">
-        <header class="secao__cabecalho">
-          <p class="rotulo">Triagem</p>
-          <h2 class="secao__titulo" id="triagem-titulo">Três níveis, decididos por regras que podem ser auditadas</h2>
-          <p class="secao__intro">Quem classifica é um conjunto de regras escritas e revisadas por profissionais de saúde, não a inteligência artificial. Cada regra pode ser lida, questionada e corrigida. Para a mesma entrada, o resultado é sempre o mesmo.</p>
-        </header>
-
-        <div class="niveis">
-          <article class="nivel nivel--verde">
-            <svg class="nivel__icone" viewBox="0 0 48 48" width="48" height="48" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
-              <circle cx="24" cy="24" r="19"/>
-              <path d="M15 24.5l6 6 12-13"/>
-            </svg>
-            <h3 class="nivel__nome">Verde <span class="nivel__descricao">Tudo dentro do esperado</span></h3>
-            <p>O registro é guardado no histórico. Ninguém é acionado.</p>
-          </article>
-
-          <article class="nivel nivel--amarelo">
-            <svg class="nivel__icone" viewBox="0 0 48 48" width="48" height="48" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M24 6L44 41H4z"/>
-              <path d="M24 19v11"/>
-              <path d="M24 35.5v.5"/>
-            </svg>
-            <h3 class="nivel__nome">Amarelo <span class="nivel__descricao">Atenção</span></h3>
-            <p>Algo saiu do padrão. O paciente recebe orientação de acompanhar e o caso fica sinalizado para a equipe na próxima revisão.</p>
-          </article>
-
-          <article class="nivel nivel--vermelho">
-            <svg class="nivel__icone" viewBox="0 0 48 48" width="48" height="48" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M24 6c-7 0-12 5-12 12v9l-4 7h32l-4-7v-9c0-7-5-12-12-12z"/>
-              <path d="M20 39a4 4 0 0 0 8 0"/>
-            </svg>
-            <h3 class="nivel__nome">Vermelho <span class="nivel__descricao">Alerta</span></h3>
-            <p>Sinal que pede avaliação rápida. A equipe responsável e o contato de confiança são avisados, e o paciente é orientado a procurar atendimento.</p>
-          </article>
-        </div>
-
-        <p class="triagem__apoio">O profissional não precisa vigiar um painel. Na maior parte do tempo, o Coema não pede nada dele. Quando abre um caso, encontra o resumo e a linha do tempo prontos.</p>
-
-        <div class="demo">
-          <h3 class="demo__titulo">Veja a lógica em um exemplo</h3>
-          <p class="demo__aviso"><strong>Demonstração ilustrativa</strong> com regras simplificadas e fictícias. Não é o sistema real e não deve ser usada para avaliar a saúde de ninguém.</p>
-
-          <form class="demo__form" data-triagem-demo>
-            <fieldset class="demo__grupo">
-              <legend>Como você está hoje?</legend>
-              <label class="opcao"><input type="radio" name="estado" value="bem"> Bem</label>
-              <label class="opcao"><input type="radio" name="estado" value="medio"> Mais ou menos</label>
-              <label class="opcao"><input type="radio" name="estado" value="mal"> Mal</label>
-            </fieldset>
-
-            <fieldset class="demo__grupo">
-              <legend>Tomou a medicação?</legend>
-              <label class="opcao"><input type="radio" name="medicacao" value="sim"> Sim</label>
-              <label class="opcao"><input type="radio" name="medicacao" value="nao"> Não</label>
-            </fieldset>
-
-            <fieldset class="demo__grupo">
-              <legend>Notou algo diferente?</legend>
-              <label class="opcao"><input type="radio" name="sinal" value="nada"> Nada</label>
-              <label class="opcao"><input type="radio" name="sinal" value="cansaco"> Cansaço fora do comum</label>
-              <label class="opcao"><input type="radio" name="sinal" value="dor"> Dor ou inchaço nas articulações</label>
-              <label class="opcao"><input type="radio" name="sinal" value="febre"> Febre</label>
-            </fieldset>
-
-            <div class="resultado" data-triagem-resultado aria-live="polite">
-              <p class="resultado__nivel">Escolha as três respostas para ver o resultado.</p>
-              <p class="resultado__texto"></p>
-              <p class="resultado__regra"></p>
-            </div>
-          </form>
-
-          <p class="nota">Nenhuma resposta é enviada ou guardada. Tudo acontece nesta página.</p>
-        </div>
-
-        <noscript>
-          <p class="nota">A demonstração interativa precisa de JavaScript. Os três níveis estão descritos acima.</p>
-        </noscript>
-      </div>
-    </section>
-
-        <!-- SEÇÃO 8: SEGURANÇA E PRIVACIDADE -->
-    <section class="secao seguranca" id="seguranca" aria-labelledby="seguranca-titulo">
-      <div class="container">
-        <header class="secao__cabecalho">
-          <p class="rotulo rotulo--claro">Segurança</p>
-          <h2 class="secao__titulo" id="seguranca-titulo">Dado de saúde é dado sensível</h2>
-          <p class="secao__intro">O Coema lida com a informação mais delicada que alguém pode registrar. Por isso a proteção de dados faz parte do desenho desde o início, e não é uma camada colocada depois.</p>
-        </header>
-
-        <ul class="garantias">
-          <li class="garantia">
-            <svg class="garantia__icone" viewBox="0 0 32 32" width="32" height="32" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M16 3l11 4v8c0 7-4.5 11.5-11 14C9.500 26.500 5 22 5 15V7z"/>
-              <path d="M11 16l3.500 3.500L21 12"/>
-            </svg>
-            <h3 class="garantia__titulo">LGPD desde a modelagem</h3>
-            <p>A Lei Geral de Proteção de Dados trata dado de saúde como dado sensível. O projeto nasce com esse requisito.</p>
-          </li>
-
-          <li class="garantia">
-            <svg class="garantia__icone" viewBox="0 0 32 32" width="32" height="32" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <circle cx="11" cy="16" r="6"/>
-              <path d="M17 16h12M24 16v5M28 16v3"/>
-            </svg>
-            <h3 class="garantia__titulo">O paciente decide quem vê</h3>
-            <p>O acesso do profissional acontece por um token gerado pelo próprio paciente.</p>
-          </li>
-
-          <li class="garantia">
-            <svg class="garantia__icone" viewBox="0 0 32 32" width="32" height="32" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M4 7h24l-9 11v8l-6-3v-5z"/>
-            </svg>
-            <h3 class="garantia__titulo">Só o necessário</h3>
-            <p>Coletamos apenas o que serve ao acompanhamento.</p>
-          </li>
-
-          <li class="garantia">
-            <svg class="garantia__icone" viewBox="0 0 32 32" width="32" height="32" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M8 3h12l6 6v20H8z"/>
-              <path d="M20 3v6h6M12 15h10M12 20h10M12 25h6"/>
-            </svg>
-            <h3 class="garantia__titulo">Regras auditáveis</h3>
-            <p>A triagem pode ser examinada linha a linha. Não há decisão tomada por um modelo que ninguém consegue explicar.</p>
-          </li>
-
-          <li class="garantia">
-            <svg class="garantia__icone" viewBox="0 0 32 32" width="32" height="32" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M12 4v9L5 26a2 2 0 0 0 2 3h18a2 2 0 0 0 2-3l-7-13V4"/>
-              <path d="M10 4h12M9 21h14"/>
-            </svg>
-            <h3 class="garantia__titulo">Protótipo com dados fictícios</h3>
-            <p>Nenhum dado de paciente real é usado nesta fase.</p>
-          </li>
-
-          <li class="garantia">
-            <svg class="garantia__icone" viewBox="0 0 32 32" width="32" height="32" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M4 16s4.500-8 12-8 12 8 12 8-4.500 8-12 8S4 16 4 16z"/>
-              <circle cx="16" cy="16" r="3"/>
-              <path d="M5 5l22 22"/>
-            </svg>
-            <h3 class="garantia__titulo">Este site não coleta nada</h3>
-            <p>Sem cookies, sem rastreadores, sem formulários, sem serviços de terceiros.</p>
-          </li>
-        </ul>
-
-        <p class="nota nota--clara">Detalhes de arquitetura e as regras clínicas não são publicados neste site.</p>
-      </div>
-    </section>
-
-    <!-- SEÇÃO 9: ONDE ESTAMOS -->
-    <section class="secao estagio" id="estagio" aria-labelledby="estagio-titulo">
-      <div class="container">
-        <header class="secao__cabecalho">
-          <p class="rotulo">Estágio</p>
-          <h2 class="secao__titulo" id="estagio-titulo">Um projeto em construção, dito com clareza</h2>
-        </header>
-
-        <ol class="fases">
-          <li class="fase fase--atual">
-            <p class="fase__quando">Hoje <span class="fase__selo">Estamos aqui</span></p>
-            <h3 class="fase__titulo">Ideação e prototipação</h3>
-            <p>Pesquisa, desenho da solução e protótipo navegável. Ainda não há piloto nem pacientes usando.</p>
-          </li>
-          <li class="fase">
-            <p class="fase__quando">Próximo passo</p>
-            <h3 class="fase__titulo">MVP</h3>
-            <p>Check-in diário, triagem em três níveis e histórico compartilhado por token, para validação com profissionais de saúde.</p>
-          </li>
-                    <li class="fase">
-            <p class="fase__quando">Visão</p>
-            <h3 class="fase__titulo">Um cuidado mais amplo</h3>
-            <p>O que queremos alcançar depois do MVP:</p>
-            <ul class="lista lista--resposta fase__lista">
-              <li><strong>Outras doenças crônicas</strong>, além do lúpus.</li>
-              <li><strong>Saúde mental:</strong> acompanhamento do bem-estar emocional e apoio psicológico como parte do cuidado.</li>
-              <li><strong>Atividade física:</strong> incentivo e acompanhamento de movimento adequado a cada condição, com orientação profissional.</li>
-              <li><strong>Internet das Coisas:</strong> leitura de dispositivos como relógios e medidores de pressão, glicemia e temperatura, com autorização do paciente e segundo orientação médica.</li>
-              <li><strong>Integração</strong> com os serviços de saúde que atendem o paciente.</li>
-            </ul>
-          </li>
-        </ol>
-      </div>
-    </section>
-
-        <!-- SEÇÃO 10: DIÁRIO DE BORDO -->
-    <section class="secao diario-secao" id="diario" aria-labelledby="diario-titulo">
-      <div class="container">
-        <header class="secao__cabecalho">
-          <p class="rotulo">Diário de bordo</p>
-          <h2 class="secao__titulo" id="diario-titulo">O que foi feito, e quando</h2>
-          <p class="secao__intro">Registro aberto do andamento do projeto, atualizado pela equipe.</p>
-        </header>
-
-        <div class="diario" data-diario data-fonte="data/diario.json">
-          <div class="diario__filtros" role="group" aria-label="Filtrar registros por tipo"></div>
-          <p class="diario__status" aria-live="polite"></p>
-          <div class="diario__lista"></div>
-          <button class="botao botao--escuro diario__mais" type="button" hidden>Ver registros anteriores</button>
-        </div>
-
-        <noscript>
-          <ol class="registros">
-            <li class="registro">
-              <article>
-                <time class="registro__data" datetime="2026-11-14">14 de novembro de 2026</time>
-                <h3 class="registro__titulo">Site no ar</h3>
-                <p>Publicação da primeira versão deste site.</p>
-                <p class="registro__meta">Fernanda Romão · Desenvolvimento</p>
-              </article>
+          <ol class="dores">
+            <li class="dor dor--com-imagem">
+              <div class="dor__texto">
+                <span class="dor__numero" aria-hidden="true">01</span>
+                <h3 class="dor__titulo">O cuidado não tem folga</h3>
+                <p>
+                  Remédios em vários horários, exames periódicos, consultas com
+                  mais de um especialista, receitas que vencem. Gerir a própria
+                  doença é um trabalho diário, e quase ninguém vê.
+                </p>
+              </div>
+              <figure class="dor__figura">
+                <img
+                  src="img/cenas/rotina.webp"
+                  width="1200"
+                  height="1528"
+                  loading="lazy"
+                  decoding="async"
+                  alt="Ilustração a lápis de cor de uma mulher sentada à mesa da cozinha, de madrugada, segurando uma caneca diante de uma caixa organizadora de remédios."
+                />
+                <figcaption>Lia, na cozinha, antes de amanhecer.</figcaption>
+              </figure>
             </li>
-            <li class="registro">
-              <article>
-                <time class="registro__data" datetime="2026-11-11">11 de novembro de 2026</time>
-                <h3 class="registro__titulo">Filme de apresentação</h3>
-                <p>Finalização do filme de 15 segundos "Coema: já é dia".</p>
-                <p class="registro__meta">Fernanda Romão · Design</p>
-              </article>
+
+            <li class="dor dor--com-imagem dor--invertida">
+              <div class="dor__texto">
+                <span class="dor__numero" aria-hidden="true">02</span>
+                <h3 class="dor__titulo">A memória falha</h3>
+                <p>
+                  A doença e os tratamentos podem afetar memória e atenção.
+                  Perder um exame ou deixar uma receita vencer não é descuido:
+                  faz parte do quadro, e interrompe o tratamento.
+                </p>
+              </div>
+              <figure class="dor__figura">
+                <img
+                  src="img/cenas/memoria.webp"
+                  width="1200"
+                  height="1307"
+                  loading="lazy"
+                  decoding="async"
+                  alt="Ilustração de uma mulher com a mão na testa diante de uma geladeira coberta de bilhetes e de um calendário com dias riscados."
+                />
+                <figcaption>
+                  Bilhetes na geladeira nem sempre bastam.
+                </figcaption>
+              </figure>
             </li>
-            <li class="registro">
-              <article>
-                <time class="registro__data" datetime="2026-11-10">10 de novembro de 2026</time>
-                <h3 class="registro__titulo">Identidade visual e personagem</h3>
-                <p>Definição da paleta e criação da Lia, que acompanha a história do projeto.</p>
-                <p class="registro__meta">Fernanda Romão · Design</p>
-              </article>
+
+            <li class="dor dor--com-imagem">
+              <div class="dor__texto">
+                <span class="dor__numero" aria-hidden="true">03</span>
+                <h3 class="dor__titulo">Meses sem ninguém olhando</h3>
+                <p>
+                  O retorno costuma ser marcado para meses depois. Nesse
+                  intervalo, o que a pessoa sente não chega a ninguém.
+                </p>
+              </div>
+              <figure class="dor__figura">
+                <img
+                  src="img/cenas/caminho.webp"
+                  width="1200"
+                  height="1792"
+                  loading="lazy"
+                  decoding="async"
+                  alt="Ilustração de uma mulher pequena caminhando sozinha, à noite, por uma estrada feita de folhas de calendário, sob uma lua fina."
+                />
+                <figcaption>O caminho até a próxima consulta.</figcaption>
+              </figure>
+            </li>
+
+            <li class="dor dor--destaque">
+              <div class="dor__texto">
+                <span class="dor__numero" aria-hidden="true">04</span>
+                <h3 class="dor__titulo">Sinais pequenos, danos grandes</h3>
+                <p>
+                  Dor, inchaço, febre e cansaço extremo parecem pouco no começo
+                  e podem ser o início de uma crise. Sem acompanhamento, a
+                  inflamação pode atingir rins, coração, pulmões, articulações e
+                  sistema nervoso, e deixar sequelas que poderiam ser evitadas.
+                </p>
+              </div>
+            </li>
+
+            <li class="dor">
+              <div class="dor__texto">
+                <span class="dor__numero" aria-hidden="true">05</span>
+                <h3 class="dor__titulo">
+                  A cada atendimento, um profissional diferente
+                </h3>
+                <p>
+                  Quando a equipe muda, parte da história clínica se perde. O
+                  paciente reconta tudo, e nem tudo é lembrado.
+                </p>
+                <p>
+                  <a href="#rotatividade">Leia mais sobre a rotatividade</a>
+                </p>
+              </div>
+            </li>
+
+            <li class="dor dor--com-imagem dor--invertida">
+              <div class="dor__texto">
+                <span class="dor__numero" aria-hidden="true">06</span>
+                <h3 class="dor__titulo">Na urgência, ninguém conhece o caso</h3>
+                <p>
+                  Quem atende num pronto-atendimento não tem o histórico e tem
+                  poucos minutos. Um sinal de alerta de uma doença complexa pode
+                  ser lido como algo simples.
+                </p>
+              </div>
+              <figure class="dor__figura">
+                <img
+                  src="img/cenas/pronto-atendimento.webp"
+                  width="1200"
+                  height="1412"
+                  loading="lazy"
+                  decoding="async"
+                  alt="Ilustração de uma mulher sentada numa maca, segurando uma pasta de papéis, enquanto um médico de jaleco se afasta com uma prancheta."
+                />
+                <figcaption>
+                  Papéis soltos não contam a história inteira.
+                </figcaption>
+              </figure>
+            </li>
+
+            <li class="dor">
+              <div class="dor__texto">
+                <span class="dor__numero" aria-hidden="true">07</span>
+                <h3 class="dor__titulo">O peso de carregar tudo sozinho</h3>
+                <p>
+                  Repetir a própria história, lembrar de tudo e decidir sozinho
+                  quando procurar ajuda cansa e é insuficiente. Esse cansaço é
+                  uma das razões pelas quais tratamentos são abandonados.
+                </p>
+              </div>
             </li>
           </ol>
-        </noscript>
-      </div>
-    </section>
 
-    <!-- AS PRÓXIMAS SEÇÕES ENTRAM AQUI -->
+          <p class="problema__fecho">
+            Essas sete dificuldades têm a mesma raiz. A informação existe, mas
+            está espalhada, incompleta ou não chega a quem precisa dela, na hora
+            em que precisa.
+          </p>
 
-  </main>
-</body>
+          <p class="nota">
+            Conteúdo informativo, que não substitui a orientação de um
+            profissional de saúde. Fontes:
+            <a
+              href="https://www.gov.br/saude/pt-br/assuntos/saude-de-a-a-z/l/lupus"
+              target="_blank"
+              rel="noopener noreferrer"
+              >Ministério da Saúde</a
+            >
+            e
+            <a
+              href="https://www.reumatologia.org.br"
+              target="_blank"
+              rel="noopener noreferrer"
+              >Sociedade Brasileira de Reumatologia</a
+            >.
+          </p>
+        </div>
+      </section>
+
+      <!-- SEÇÃO 3: A ROTATIVIDADE -->
+      <section
+        class="secao rotatividade"
+        id="rotatividade"
+        aria-labelledby="rotatividade-titulo"
+      >
+        <div class="container">
+          <header class="secao__cabecalho">
+            <p class="rotulo">Continuidade do cuidado</p>
+            <h2 class="secao__titulo" id="rotatividade-titulo">
+              Quando o médico muda, a história recomeça
+            </h2>
+            <p class="secao__intro">
+              Em muitos serviços de saúde, as equipes mudam com frequência. Quem
+              trata uma doença por anos passa por vários profissionais, e o
+              registro nem sempre acompanha o paciente.
+            </p>
+          </header>
+
+          <div class="rotatividade__colunas">
+            <div class="rotatividade__coluna">
+              <h3 class="rotatividade__subtitulo">O que isso causa</h3>
+              <ul class="lista lista--problema">
+                <li>
+                  O paciente reconta tudo a cada consulta, e detalhes se perdem.
+                </li>
+                <li>Exames já feitos são pedidos de novo.</li>
+                <li>Decisões são tomadas com informação parcial.</li>
+                <li>
+                  Mudanças lentas, que só aparecem comparando meses, passam
+                  despercebidas.
+                </li>
+                <li>
+                  A confiança entre paciente e profissional recomeça do zero.
+                </li>
+              </ul>
+            </div>
+
+            <div class="rotatividade__coluna rotatividade__coluna--resposta">
+              <h3 class="rotatividade__subtitulo">Como o Coema responde</h3>
+              <ul class="lista lista--resposta">
+                <li>
+                  O histórico fica com o paciente e vai com ele a qualquer
+                  atendimento.
+                </li>
+                <li>
+                  Uma linha do tempo organiza diagnósticos, exames, medicações,
+                  sintomas e alertas.
+                </li>
+                <li>
+                  Um resumo do caso apresenta o essencial a quem atende pela
+                  primeira vez.
+                </li>
+                <li>
+                  O paciente gera um token e o profissional abre o histórico no
+                  navegador, sem instalar nada.
+                </li>
+                <li>
+                  Os alertas vão para a equipe, a unidade de acompanhamento ou o
+                  profissional responsável, e não apenas para uma pessoa
+                  específica. Por isso não se perdem quando alguém sai.
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <figure class="figura-ampla">
+            <img
+              src="img/cenas/consulta.webp"
+              width="1200"
+              height="1448"
+              loading="lazy"
+              decoding="async"
+              alt="Ilustração de uma médica sentada ao lado de uma paciente, lendo com atenção o resumo do caso na tela de um celular."
+            />
+            <figcaption>
+              Com o histórico em mãos, a consulta começa de onde a anterior
+              parou.
+            </figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <!-- SEÇÃO 4: A SOLUÇÃO -->
+      <section
+        class="secao solucao"
+        id="solucao"
+        aria-labelledby="solucao-titulo"
+      >
+        <div class="container">
+          <header class="secao__cabecalho">
+            <p class="rotulo">A solução</p>
+            <h2 class="secao__titulo" id="solucao-titulo">
+              Para cada dificuldade, uma resposta
+            </h2>
+            <p class="secao__intro">
+              O Coema transforma o cuidado diário do paciente em acompanhamento
+              contínuo, sem trabalho extra para ele nem para a equipe.
+            </p>
+          </header>
+
+          <div class="pares" data-pares>
+            <div
+              class="pares__abas"
+              role="tablist"
+              aria-orientation="vertical"
+              aria-label="Dificuldades"
+              hidden
+            ></div>
+
+            <div class="pares__paineis">
+              <article class="par" id="par-1">
+                <p class="par__dor">
+                  <span class="par__numero">01</span> O cuidado não tem folga
+                </p>
+                <h3 class="par__resposta">Rotina em um só lugar</h3>
+                <p>
+                  Medicações organizadas por horário, exames, consultas e
+                  receitas reunidos e visíveis.
+                </p>
+              </article>
+
+              <article class="par" id="par-2">
+                <p class="par__dor">
+                  <span class="par__numero">02</span> A memória falha
+                </p>
+                <h3 class="par__resposta">Lembretes com antecedência</h3>
+                <p>
+                  O aviso começa um mês antes e se repete: quinze dias, uma
+                  semana, três dias, véspera e horas antes. O som é discreto, e
+                  um segundo lembrete, mais suave, aparece se o primeiro passar.
+                </p>
+              </article>
+
+              <article class="par" id="par-3">
+                <p class="par__dor">
+                  <span class="par__numero">03</span> Meses sem ninguém olhando
+                </p>
+                <h3 class="par__resposta">Check-in diário</h3>
+                <p>
+                  Um registro rápido de como a pessoa está, parecido com um
+                  caderno de humor. Só pede detalhes quando algo relevante
+                  acontece.
+                </p>
+              </article>
+
+              <article class="par" id="par-4">
+                <p class="par__dor">
+                  <span class="par__numero">04</span> Sinais pequenos, danos
+                  grandes
+                </p>
+                <h3 class="par__resposta">Triagem em três níveis</h3>
+                <p>
+                  O sistema percebe desvios cedo e indica o que fazer, antes que
+                  virem crise.
+                </p>
+              </article>
+
+              <article class="par" id="par-5">
+                <p class="par__dor">
+                  <span class="par__numero">05</span> Um profissional diferente
+                  a cada vez
+                </p>
+                <h3 class="par__resposta">Histórico com o paciente</h3>
+                <p>
+                  A história clínica completa, aberta por token a quem estiver
+                  atendendo.
+                </p>
+              </article>
+
+              <article class="par" id="par-6">
+                <p class="par__dor">
+                  <span class="par__numero">06</span> Na urgência, ninguém
+                  conhece o caso
+                </p>
+                <h3 class="par__resposta">Resumo e cartão de emergência</h3>
+                <p>
+                  Um resumo do quadro pronto para mostrar e um cartão com
+                  diagnóstico, alergias, medicações e contato, disponível mesmo
+                  sem internet.
+                </p>
+              </article>
+
+              <article class="par" id="par-7">
+                <p class="par__dor">
+                  <span class="par__numero">07</span> O peso de carregar tudo
+                  sozinho
+                </p>
+                <h3 class="par__resposta">Rede de apoio</h3>
+                <p>
+                  Um contato de confiança é avisado em situação de risco, e um
+                  cuidador pode registrar e consultar informações quando o
+                  paciente não estiver em condições.
+                </p>
+              </article>
+            </div>
+          </div>
+
+          <div class="solucao__fecho">
+            <figure class="solucao__figura">
+              <img
+                src="img/cenas/amanhecer.webp"
+                width="1200"
+                height="1564"
+                loading="lazy"
+                decoding="async"
+                alt="Ilustração de uma mulher sorrindo para o celular, sentada junto a uma janela, com a luz do amanhecer entrando."
+              />
+              <figcaption>
+                Um registro por dia, e alguém passa a acompanhar.
+              </figcaption>
+            </figure>
+            <p class="solucao__principio">
+              O Coema existe para acompanhar, não para vigiar. Cada decisão de
+              desenho procura reduzir culpa, esforço e carga mental.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- SEÇÃO 5: COMO FUNCIONA -->
+      <section
+        class="secao funciona"
+        id="como-funciona"
+        aria-labelledby="funciona-titulo"
+      >
+        <div class="container">
+          <header class="secao__cabecalho">
+            <p class="rotulo">Como funciona</p>
+            <h2 class="secao__titulo" id="funciona-titulo">
+              Um minuto por dia
+            </h2>
+          </header>
+
+          <ol class="passos">
+            <li class="passo">
+              <span class="passo__numero" aria-hidden="true">1</span>
+              <h3 class="passo__titulo">O paciente registra</h3>
+              <p>
+                Um check-in rápido: como está hoje, se tomou a medicação, se
+                notou algo diferente.
+              </p>
+            </li>
+            <li class="passo">
+              <span class="passo__numero" aria-hidden="true">2</span>
+              <h3 class="passo__titulo">O sistema organiza</h3>
+              <p>
+                O relato vira registro estruturado e passa pelas regras de
+                triagem.
+              </p>
+            </li>
+            <li class="passo">
+              <span class="passo__numero" aria-hidden="true">3</span>
+              <h3 class="passo__titulo">A pessoa certa é avisada</h3>
+              <p>
+                Na maior parte dos dias, ninguém precisa fazer nada. Quando
+                precisa, o aviso chega a quem pode agir.
+              </p>
+            </li>
+          </ol>
+        </div>
+      </section>
+
+      <!-- SEÇÃO 6: A IA -->
+      <section class="secao ia" id="ia" aria-labelledby="ia-titulo">
+        <div class="container">
+          <header class="secao__cabecalho">
+            <p class="rotulo">Inteligência artificial</p>
+            <h2 class="secao__titulo" id="ia-titulo">
+              A IA escuta e organiza. Não diagnostica.
+            </h2>
+            <p class="secao__intro">
+              No Coema, a inteligência artificial tem uma função delimitada:
+              conversar com o paciente e transformar o que ele conta em
+              informação organizada. Ela não decide a gravidade de nada e não
+              substitui nenhum profissional.
+            </p>
+          </header>
+
+          <div class="ia__grade">
+            <div class="ia__coluna">
+              <h3 class="ia__subtitulo">
+                Como separamos o que é sintoma do que não é
+              </h3>
+              <p>
+                Quem convive com uma doença crônica conta o dia inteiro, não uma
+                lista de sintomas. No mesmo relato cabem uma dor nova, uma noite
+                mal dormida e uma semana difícil no trabalho. O caminho proposto
+                é este:
+              </p>
+
+              <ol class="etapas">
+                <li class="etapa">
+                  <h4 class="etapa__titulo">Relato livre</h4>
+                  <p>
+                    A pessoa escreve ou responde com as próprias palavras, sem
+                    formulário longo.
+                  </p>
+                </li>
+                <li class="etapa">
+                  <h4 class="etapa__titulo">
+                    Comparação com uma lista fechada
+                  </h4>
+                  <p>
+                    A IA procura no relato apenas os sinais de uma lista
+                    definida e revisada por profissionais de saúde. Ela não cria
+                    categorias novas.
+                  </p>
+                </li>
+                <li class="etapa">
+                  <h4 class="etapa__titulo">Registro estruturado</h4>
+                  <p>
+                    O que corresponde à lista vira um registro com quatro
+                    campos: o quê, onde, desde quando e com que intensidade.
+                  </p>
+                </li>
+                <li class="etapa">
+                  <h4 class="etapa__titulo">
+                    O restante continua sendo do paciente
+                  </h4>
+                  <p>
+                    O que não é sinal clínico fica guardado como anotação
+                    pessoal. Dá contexto à consulta, mas não entra na triagem.
+                  </p>
+                </li>
+                <li class="etapa">
+                  <h4 class="etapa__titulo">Confirmação</h4>
+                  <p>
+                    Antes de salvar, a IA mostra o que entendeu, em linguagem
+                    simples, e a pessoa confirma ou corrige.
+                  </p>
+                </li>
+                <li class="etapa">
+                  <h4 class="etapa__titulo">Na dúvida, pergunta</h4>
+                  <p>
+                    Se o relato é ambíguo, a IA faz uma pergunta objetiva. Ela
+                    nunca presume.
+                  </p>
+                </li>
+                <li class="etapa">
+                  <h4 class="etapa__titulo">Só então, as regras</h4>
+                  <p>
+                    Apenas os sinais confirmados pelo paciente seguem para a
+                    triagem.
+                  </p>
+                </li>
+              </ol>
+            </div>
+
+            <div class="ia__coluna">
+              <div class="exemplo">
+                <p class="exemplo__rotulo">Exemplo fictício</p>
+
+                <h4 class="exemplo__titulo">O que a pessoa escreveu</h4>
+                <p class="exemplo__fala">
+                  Dormi mal, briguei com minha irmã e acordei com as mãos
+                  inchadas e doendo.
+                </p>
+
+                <h4 class="exemplo__titulo">O que o Coema registrou</h4>
+                <dl class="exemplo__lista">
+                  <dt>Sinal</dt>
+                  <dd>
+                    Inchaço e dor nas mãos, desde hoje pela manhã, intensidade a
+                    confirmar.
+                  </dd>
+                  <dt>Pergunta feita</dt>
+                  <dd>De 0 a 10, quanto dói?</dd>
+                  <dt>Anotação pessoal</dt>
+                  <dd>Noite mal dormida; dia de conflito familiar.</dd>
+                </dl>
+              </div>
+
+              <p class="nota">
+                Este é o desenho proposto. A lista de sinais e os critérios
+                serão definidos e validados com profissionais de saúde antes de
+                qualquer uso real.
+              </p>
+
+              <div class="limites">
+                <h3 class="limites__titulo">O que a IA nunca faz</h3>
+                <ul class="lista lista--nunca">
+                  <li>Não dá diagnóstico.</li>
+                  <li>Não classifica a gravidade.</li>
+                  <li>Não indica nem altera medicação.</li>
+                  <li>Não interpreta exames.</li>
+                  <li>Não substitui consulta nem atendimento de urgência.</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SEÇÃO 7: A TRIAGEM -->
+      <section
+        class="secao triagem"
+        id="triagem"
+        aria-labelledby="triagem-titulo"
+      >
+        <div class="container">
+          <header class="secao__cabecalho">
+            <p class="rotulo">Triagem</p>
+            <h2 class="secao__titulo" id="triagem-titulo">
+              Três níveis, decididos por regras que podem ser auditadas
+            </h2>
+            <p class="secao__intro">
+              Quem classifica é um conjunto de regras escritas e revisadas por
+              profissionais de saúde, não a inteligência artificial. Cada regra
+              pode ser lida, questionada e corrigida. Para a mesma entrada, o
+              resultado é sempre o mesmo.
+            </p>
+          </header>
+
+          <div class="niveis">
+            <article class="nivel nivel--verde">
+              <svg
+                class="nivel__icone"
+                viewBox="0 0 48 48"
+                width="48"
+                height="48"
+                aria-hidden="true"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="3"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <circle cx="24" cy="24" r="19" />
+                <path d="M15 24.5l6 6 12-13" />
+              </svg>
+              <h3 class="nivel__nome">
+                Verde
+                <span class="nivel__descricao">Tudo dentro do esperado</span>
+              </h3>
+              <p>O registro é guardado no histórico. Ninguém é acionado.</p>
+            </article>
+
+            <article class="nivel nivel--amarelo">
+              <svg
+                class="nivel__icone"
+                viewBox="0 0 48 48"
+                width="48"
+                height="48"
+                aria-hidden="true"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="3"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path d="M24 6L44 41H4z" />
+                <path d="M24 19v11" />
+                <path d="M24 35.5v.5" />
+              </svg>
+              <h3 class="nivel__nome">
+                Amarelo <span class="nivel__descricao">Atenção</span>
+              </h3>
+              <p>
+                Algo saiu do padrão. O paciente recebe orientação de acompanhar
+                e o caso fica sinalizado para a equipe na próxima revisão.
+              </p>
+            </article>
+
+            <article class="nivel nivel--vermelho">
+              <svg
+                class="nivel__icone"
+                viewBox="0 0 48 48"
+                width="48"
+                height="48"
+                aria-hidden="true"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="3"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path
+                  d="M24 6c-7 0-12 5-12 12v9l-4 7h32l-4-7v-9c0-7-5-12-12-12z"
+                />
+                <path d="M20 39a4 4 0 0 0 8 0" />
+              </svg>
+              <h3 class="nivel__nome">
+                Vermelho <span class="nivel__descricao">Alerta</span>
+              </h3>
+              <p>
+                Sinal que pede avaliação rápida. A equipe responsável e o
+                contato de confiança são avisados, e o paciente é orientado a
+                procurar atendimento.
+              </p>
+            </article>
+          </div>
+
+          <p class="triagem__apoio">
+            O profissional não precisa vigiar um painel. Na maior parte do
+            tempo, o Coema não pede nada dele. Quando abre um caso, encontra o
+            resumo e a linha do tempo prontos.
+          </p>
+
+          <div class="demo">
+            <h3 class="demo__titulo">Veja a lógica em um exemplo</h3>
+            <p class="demo__aviso">
+              <strong>Demonstração ilustrativa</strong> com regras simplificadas
+              e fictícias. Não é o sistema real e não deve ser usada para
+              avaliar a saúde de ninguém.
+            </p>
+
+            <form class="demo__form" data-triagem-demo>
+              <fieldset class="demo__grupo">
+                <legend>Como você está hoje?</legend>
+                <label class="opcao"
+                  ><input type="radio" name="estado" value="bem" /> Bem</label
+                >
+                <label class="opcao"
+                  ><input type="radio" name="estado" value="medio" /> Mais ou
+                  menos</label
+                >
+                <label class="opcao"
+                  ><input type="radio" name="estado" value="mal" /> Mal</label
+                >
+              </fieldset>
+
+              <fieldset class="demo__grupo">
+                <legend>Tomou a medicação?</legend>
+                <label class="opcao"
+                  ><input type="radio" name="medicacao" value="sim" />
+                  Sim</label
+                >
+                <label class="opcao"
+                  ><input type="radio" name="medicacao" value="nao" />
+                  Não</label
+                >
+              </fieldset>
+
+              <fieldset class="demo__grupo">
+                <legend>Notou algo diferente?</legend>
+                <label class="opcao"
+                  ><input type="radio" name="sinal" value="nada" /> Nada</label
+                >
+                <label class="opcao"
+                  ><input type="radio" name="sinal" value="cansaco" /> Cansaço
+                  fora do comum</label
+                >
+                <label class="opcao"
+                  ><input type="radio" name="sinal" value="dor" /> Dor ou
+                  inchaço nas articulações</label
+                >
+                <label class="opcao"
+                  ><input type="radio" name="sinal" value="febre" />
+                  Febre</label
+                >
+              </fieldset>
+
+              <div class="resultado" data-triagem-resultado aria-live="polite">
+                <p class="resultado__nivel">
+                  Escolha as três respostas para ver o resultado.
+                </p>
+                <p class="resultado__texto"></p>
+                <p class="resultado__regra"></p>
+              </div>
+            </form>
+
+            <p class="nota">
+              Nenhuma resposta é enviada ou guardada. Tudo acontece nesta
+              página.
+            </p>
+          </div>
+
+          <noscript>
+            <p class="nota">
+              A demonstração interativa precisa de JavaScript. Os três níveis
+              estão descritos acima.
+            </p>
+          </noscript>
+        </div>
+      </section>
+
+      <!-- SEÇÃO 8: SEGURANÇA E PRIVACIDADE -->
+      <section
+        class="secao seguranca"
+        id="seguranca"
+        aria-labelledby="seguranca-titulo"
+      >
+        <div class="container">
+          <header class="secao__cabecalho">
+            <p class="rotulo rotulo--claro">Segurança</p>
+            <h2 class="secao__titulo" id="seguranca-titulo">
+              Dado de saúde é dado sensível
+            </h2>
+            <p class="secao__intro">
+              O Coema lida com a informação mais delicada que alguém pode
+              registrar. Por isso a proteção de dados faz parte do desenho desde
+              o início, e não é uma camada colocada depois.
+            </p>
+          </header>
+
+          <ul class="garantias">
+            <li class="garantia">
+              <svg
+                class="garantia__icone"
+                viewBox="0 0 32 32"
+                width="32"
+                height="32"
+                aria-hidden="true"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path
+                  d="M16 3l11 4v8c0 7-4.5 11.5-11 14C9.500 26.500 5 22 5 15V7z"
+                />
+                <path d="M11 16l3.500 3.500L21 12" />
+              </svg>
+              <h3 class="garantia__titulo">LGPD desde a modelagem</h3>
+              <p>
+                A Lei Geral de Proteção de Dados trata dado de saúde como dado
+                sensível. O projeto nasce com esse requisito.
+              </p>
+            </li>
+
+            <li class="garantia">
+              <svg
+                class="garantia__icone"
+                viewBox="0 0 32 32"
+                width="32"
+                height="32"
+                aria-hidden="true"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <circle cx="11" cy="16" r="6" />
+                <path d="M17 16h12M24 16v5M28 16v3" />
+              </svg>
+              <h3 class="garantia__titulo">O paciente decide quem vê</h3>
+              <p>
+                O acesso do profissional acontece por um token gerado pelo
+                próprio paciente.
+              </p>
+            </li>
+
+            <li class="garantia">
+              <svg
+                class="garantia__icone"
+                viewBox="0 0 32 32"
+                width="32"
+                height="32"
+                aria-hidden="true"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path d="M4 7h24l-9 11v8l-6-3v-5z" />
+              </svg>
+              <h3 class="garantia__titulo">Só o necessário</h3>
+              <p>Coletamos apenas o que serve ao acompanhamento.</p>
+            </li>
+
+            <li class="garantia">
+              <svg
+                class="garantia__icone"
+                viewBox="0 0 32 32"
+                width="32"
+                height="32"
+                aria-hidden="true"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path d="M8 3h12l6 6v20H8z" />
+                <path d="M20 3v6h6M12 15h10M12 20h10M12 25h6" />
+              </svg>
+              <h3 class="garantia__titulo">Regras auditáveis</h3>
+              <p>
+                A triagem pode ser examinada linha a linha. Não há decisão
+                tomada por um modelo que ninguém consegue explicar.
+              </p>
+            </li>
+
+            <li class="garantia">
+              <svg
+                class="garantia__icone"
+                viewBox="0 0 32 32"
+                width="32"
+                height="32"
+                aria-hidden="true"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path d="M12 4v9L5 26a2 2 0 0 0 2 3h18a2 2 0 0 0 2-3l-7-13V4" />
+                <path d="M10 4h12M9 21h14" />
+              </svg>
+              <h3 class="garantia__titulo">Protótipo com dados fictícios</h3>
+              <p>Nenhum dado de paciente real é usado nesta fase.</p>
+            </li>
+
+            <li class="garantia">
+              <svg
+                class="garantia__icone"
+                viewBox="0 0 32 32"
+                width="32"
+                height="32"
+                aria-hidden="true"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path
+                  d="M4 16s4.500-8 12-8 12 8 12 8-4.500 8-12 8S4 16 4 16z"
+                />
+                <circle cx="16" cy="16" r="3" />
+                <path d="M5 5l22 22" />
+              </svg>
+              <h3 class="garantia__titulo">Este site não coleta nada</h3>
+              <p>
+                Sem cookies, sem rastreadores, sem envio de dados, sem serviços
+                de terceiros.
+              </p>
+            </li>
+          </ul>
+
+          <p class="nota nota--clara">
+            Detalhes de arquitetura e as regras clínicas não são publicados
+            neste site.
+          </p>
+        </div>
+      </section>
+
+      <!-- SEÇÃO 9: ONDE ESTAMOS -->
+      <section
+        class="secao estagio"
+        id="estagio"
+        aria-labelledby="estagio-titulo"
+      >
+        <div class="container">
+          <header class="secao__cabecalho">
+            <p class="rotulo">Estágio</p>
+            <h2 class="secao__titulo" id="estagio-titulo">
+              Um projeto em construção, dito com clareza
+            </h2>
+          </header>
+
+          <ol class="fases">
+            <li class="fase fase--atual">
+              <p class="fase__quando">
+                Hoje <span class="fase__selo">Estamos aqui</span>
+              </p>
+              <h3 class="fase__titulo">Ideação e prototipação</h3>
+              <p>
+                Pesquisa, desenho da solução e protótipo navegável. Ainda não há
+                piloto nem pacientes usando.
+              </p>
+            </li>
+            <li class="fase">
+              <p class="fase__quando">Próximo passo</p>
+              <h3 class="fase__titulo">MVP</h3>
+              <p>
+                Check-in diário, triagem em três níveis e histórico
+                compartilhado por token, para validação com profissionais de
+                saúde.
+              </p>
+            </li>
+            <li class="fase">
+              <p class="fase__quando">Visão</p>
+              <h3 class="fase__titulo">Um cuidado mais amplo</h3>
+              <p>O que queremos alcançar depois do MVP:</p>
+              <ul class="lista lista--resposta fase__lista">
+                <li>
+                  <strong>Outras doenças crônicas</strong>, além do lúpus.
+                </li>
+                <li>
+                  <strong>Saúde mental:</strong> acompanhamento do bem-estar
+                  emocional e apoio psicológico como parte do cuidado.
+                </li>
+                <li>
+                  <strong>Atividade física:</strong> incentivo e acompanhamento
+                  de movimento adequado a cada condição, com orientação
+                  profissional.
+                </li>
+                <li>
+                  <strong>Internet das Coisas:</strong> leitura de dispositivos
+                  como relógios e medidores de pressão, glicemia e temperatura,
+                  com autorização do paciente e segundo orientação médica.
+                </li>
+                <li>
+                  <strong>Integração</strong> com os serviços de saúde que
+                  atendem o paciente.
+                </li>
+              </ul>
+            </li>
+          </ol>
+        </div>
+      </section>
+
+      <!-- SEÇÃO 10: DIÁRIO DE BORDO -->
+      <section
+        class="secao diario-secao"
+        id="diario"
+        aria-labelledby="diario-titulo"
+      >
+        <div class="container">
+          <header class="secao__cabecalho">
+            <p class="rotulo">Diário de bordo</p>
+            <h2 class="secao__titulo" id="diario-titulo">
+              O que foi feito, e quando
+            </h2>
+            <p class="secao__intro">
+              Registro aberto do andamento do projeto, atualizado pela equipe.
+            </p>
+          </header>
+
+          <div class="diario" data-diario data-fonte="data/diario.json">
+            <div
+              class="diario__filtros"
+              role="group"
+              aria-label="Filtrar registros por tipo"
+            ></div>
+            <p class="diario__status" aria-live="polite"></p>
+            <div class="diario__lista"></div>
+            <button
+              class="botao botao--escuro diario__mais"
+              type="button"
+              hidden
+            >
+              Ver registros anteriores
+            </button>
+          </div>
+
+          <noscript>
+            <ol class="registros">
+              <li class="registro">
+                <article>
+                  <time class="registro__data" datetime="2026-11-14"
+                    >14 de novembro de 2026</time
+                  >
+                  <h3 class="registro__titulo">Site no ar</h3>
+                  <p>Publicação da primeira versão deste site.</p>
+                  <p class="registro__meta">Fernanda Romão · Desenvolvimento</p>
+                </article>
+              </li>
+              <li class="registro">
+                <article>
+                  <time class="registro__data" datetime="2026-11-11"
+                    >11 de novembro de 2026</time
+                  >
+                  <h3 class="registro__titulo">Filme de apresentação</h3>
+                  <p>Finalização do filme de 15 segundos "Coema: já é dia".</p>
+                  <p class="registro__meta">Fernanda Romão · Design</p>
+                </article>
+              </li>
+              <li class="registro">
+                <article>
+                  <time class="registro__data" datetime="2026-11-10"
+                    >10 de novembro de 2026</time
+                  >
+                  <h3 class="registro__titulo">
+                    Identidade visual e personagem
+                  </h3>
+                  <p>
+                    Definição da paleta e criação da Lia, que acompanha a
+                    história do projeto.
+                  </p>
+                  <p class="registro__meta">Fernanda Romão · Design</p>
+                </article>
+              </li>
+            </ol>
+          </noscript>
+        </div>
+      </section>
+
+      <!-- AS PRÓXIMAS SEÇÕES ENTRAM AQUI -->
+    </main>
+  </body>
 </html>
