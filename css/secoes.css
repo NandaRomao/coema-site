@@ -251,3 +251,40 @@
   line-height: 1.25;
   color: var(--noite);
 }
+/* Seção 5: como funciona. Continua a faixa da solução, sem espaço duplo. */
+
+.funciona {
+  padding-top: 0;
+}
+
+/* Seção 6: a IA */
+
+.ia {
+  background-color: var(--papel-sombra);
+}
+
+.ia__grade {
+  display: grid;
+  gap: var(--espaco-5);
+}
+
+@media (min-width: 60rem) {
+  .ia__grade {
+    grid-template-columns: 1fr 1fr;
+    align-items: start;
+  }
+}
+
+.ia__subtitulo {
+  margin-bottom: var(--espaco-2);
+  font-size: var(--titulo-3);
+  color: var(--noite);
+}
+
+.ia__subtitulo--espaco {
+  margin-top: var(--espaco-5);
+}
+
+.ia .nota {
+  margin-top: var(--espaco-2);
+}
