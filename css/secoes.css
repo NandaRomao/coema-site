@@ -394,9 +394,9 @@
 
 .rodape__imagem {
   width: 100%;
-  height: clamp(14rem, 38vw, 26rem);
+  height: clamp(14rem, 38vw, 44rem);
   object-fit: cover;
-  object-position: center 60%;
+  object-position: center 58%;
 }
 
 .rodape__interno {
