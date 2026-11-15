@@ -1,3 +1,5 @@
+import { iniciarTriagemDemo } from "./triagem-demo.js";
+
 // Ponto de entrada. Cada função cuida de uma parte da página.
 
 document.documentElement.classList.add("js");
@@ -109,3 +111,4 @@ function iniciarPares() {
 
 iniciarMenu();
 iniciarPares();
+iniciarTriagemDemo();

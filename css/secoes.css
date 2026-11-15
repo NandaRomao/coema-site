@@ -288,3 +288,11 @@
 .ia .nota {
   margin-top: var(--espaco-2);
 }
+
+/* Seção 7: triagem */
+
+.triagem__apoio {
+  margin-top: var(--espaco-4);
+  max-width: 46rem;
+  font-size: var(--texto-g);
+}

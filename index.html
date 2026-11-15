@@ -390,6 +390,89 @@
       </div>
     </section>
 
+        <!-- SEÇÃO 7: A TRIAGEM -->
+    <section class="secao triagem" id="triagem" aria-labelledby="triagem-titulo">
+      <div class="container">
+        <header class="secao__cabecalho">
+          <p class="rotulo">Triagem</p>
+          <h2 class="secao__titulo" id="triagem-titulo">Três níveis, decididos por regras que podem ser auditadas</h2>
+          <p class="secao__intro">Quem classifica é um conjunto de regras escritas e revisadas por profissionais de saúde, não a inteligência artificial. Cada regra pode ser lida, questionada e corrigida. Para a mesma entrada, o resultado é sempre o mesmo.</p>
+        </header>
+
+        <div class="niveis">
+          <article class="nivel nivel--verde">
+            <svg class="nivel__icone" viewBox="0 0 48 48" width="48" height="48" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="24" cy="24" r="19"/>
+              <path d="M15 24.5l6 6 12-13"/>
+            </svg>
+            <h3 class="nivel__nome">Verde <span class="nivel__descricao">Tudo dentro do esperado</span></h3>
+            <p>O registro é guardado no histórico. Ninguém é acionado.</p>
+          </article>
+
+          <article class="nivel nivel--amarelo">
+            <svg class="nivel__icone" viewBox="0 0 48 48" width="48" height="48" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M24 6L44 41H4z"/>
+              <path d="M24 19v11"/>
+              <path d="M24 35.5v.5"/>
+            </svg>
+            <h3 class="nivel__nome">Amarelo <span class="nivel__descricao">Atenção</span></h3>
+            <p>Algo saiu do padrão. O paciente recebe orientação de acompanhar e o caso fica sinalizado para a equipe na próxima revisão.</p>
+          </article>
+
+          <article class="nivel nivel--vermelho">
+            <svg class="nivel__icone" viewBox="0 0 48 48" width="48" height="48" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M24 6c-7 0-12 5-12 12v9l-4 7h32l-4-7v-9c0-7-5-12-12-12z"/>
+              <path d="M20 39a4 4 0 0 0 8 0"/>
+            </svg>
+            <h3 class="nivel__nome">Vermelho <span class="nivel__descricao">Alerta</span></h3>
+            <p>Sinal que pede avaliação rápida. A equipe responsável e o contato de confiança são avisados, e o paciente é orientado a procurar atendimento.</p>
+          </article>
+        </div>
+
+        <p class="triagem__apoio">O profissional não precisa vigiar um painel. Na maior parte do tempo, o Coema não pede nada dele. Quando abre um caso, encontra o resumo e a linha do tempo prontos.</p>
+
+        <div class="demo">
+          <h3 class="demo__titulo">Veja a lógica em um exemplo</h3>
+          <p class="demo__aviso"><strong>Demonstração ilustrativa</strong> com regras simplificadas e fictícias. Não é o sistema real e não deve ser usada para avaliar a saúde de ninguém.</p>
+
+          <form class="demo__form" data-triagem-demo>
+            <fieldset class="demo__grupo">
+              <legend>Como você está hoje?</legend>
+              <label class="opcao"><input type="radio" name="estado" value="bem"> Bem</label>
+              <label class="opcao"><input type="radio" name="estado" value="medio"> Mais ou menos</label>
+              <label class="opcao"><input type="radio" name="estado" value="mal"> Mal</label>
+            </fieldset>
+
+            <fieldset class="demo__grupo">
+              <legend>Tomou a medicação?</legend>
+              <label class="opcao"><input type="radio" name="medicacao" value="sim"> Sim</label>
+              <label class="opcao"><input type="radio" name="medicacao" value="nao"> Não</label>
+            </fieldset>
+
+            <fieldset class="demo__grupo">
+              <legend>Notou algo diferente?</legend>
+              <label class="opcao"><input type="radio" name="sinal" value="nada"> Nada</label>
+              <label class="opcao"><input type="radio" name="sinal" value="cansaco"> Cansaço fora do comum</label>
+              <label class="opcao"><input type="radio" name="sinal" value="dor"> Dor ou inchaço nas articulações</label>
+              <label class="opcao"><input type="radio" name="sinal" value="febre"> Febre</label>
+            </fieldset>
+
+            <div class="resultado" data-triagem-resultado aria-live="polite">
+              <p class="resultado__nivel">Escolha as três respostas para ver o resultado.</p>
+              <p class="resultado__texto"></p>
+              <p class="resultado__regra"></p>
+            </div>
+          </form>
+
+          <p class="nota">Nenhuma resposta é enviada ou guardada. Tudo acontece nesta página.</p>
+        </div>
+
+        <noscript>
+          <p class="nota">A demonstração interativa precisa de JavaScript. Os três níveis estão descritos acima.</p>
+        </noscript>
+      </div>
+    </section>
+
     <!-- AS PRÓXIMAS SEÇÕES ENTRAM AQUI -->
 
   </main>
