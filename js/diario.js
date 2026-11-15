@@ -99,6 +99,17 @@ export async function iniciarDiario() {
     return;
   }
 
+  // Modo resumo (página principal): só os registros mais recentes, sem filtros.
+  const limite = Number(raiz.dataset.limite) || 0;
+  if (limite > 0) {
+    const grupo = criar("ol", "registros");
+    for (const entrada of entradas.slice(0, limite)) {
+      grupo.append(criarRegistro(entrada));
+    }
+    lista.append(grupo);
+    return;
+  }
+
   let filtro = "todos";
   let visiveis = POR_PAGINA;
 

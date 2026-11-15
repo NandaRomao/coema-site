@@ -1,0 +1,298 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; font-src 'self'; media-src 'self'; connect-src 'self'; object-src 'none'; base-uri 'self'; form-action 'none'"
+    />
+    <meta name="referrer" content="strict-origin-when-cross-origin" />
+
+    <title>Bastidores · Coema</title>
+    <meta
+      name="description"
+      content="Quem faz o Coema e o diário de bordo do projeto: o que foi feito, e quando."
+    />
+    <meta name="theme-color" content="#161C3D" />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="pt_BR" />
+    <meta property="og:title" content="Bastidores · Coema" />
+    <meta
+      property="og:description"
+      content="Quem faz o Coema e o diário de bordo do projeto."
+    />
+    <meta
+      property="og:url"
+      content="https://nandaromao.github.io/coema-site/bastidores.html"
+    />
+    <meta
+      property="og:image"
+      content="https://nandaromao.github.io/coema-site/img/previa.jpg"
+    />
+    <meta name="twitter:card" content="summary_large_image" />
+
+    <link rel="icon" href="img/favicon.svg" type="image/svg+xml" />
+    <link
+      rel="preload"
+      href="fonts/fraunces.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
+    <link
+      rel="preload"
+      href="fonts/nunito-sans.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
+
+    <link rel="stylesheet" href="css/base.css" />
+    <link rel="stylesheet" href="css/layout.css" />
+    <link rel="stylesheet" href="css/componentes.css" />
+    <link rel="stylesheet" href="css/secoes.css" />
+
+    <script type="module" src="js/main.js"></script>
+  </head>
+  <body>
+    <a class="pular" href="#conteudo">Pular para o conteúdo</a>
+
+    <header class="cabecalho">
+      <div class="container cabecalho__interno">
+        <a
+          class="cabecalho__marca"
+          href="index.html"
+          aria-label="Coema, página inicial"
+          >Coema</a
+        >
+
+        <button
+          class="cabecalho__botao"
+          type="button"
+          aria-expanded="false"
+          aria-controls="menu-principal"
+        >
+          <span class="cabecalho__botao-texto">Menu</span>
+        </button>
+
+        <nav class="menu" id="menu-principal" aria-label="Navegação principal">
+          <ul class="menu__lista">
+            <li><a class="menu__link" href="index.html#problema">O problema</a></li>
+            <li><a class="menu__link" href="index.html#solucao">A solução</a></li>
+            <li><a class="menu__link" href="index.html#ia">A IA</a></li>
+            <li><a class="menu__link" href="index.html#seguranca">Segurança</a></li>
+            <li>
+              <a class="menu__link" href="bastidores.html" aria-current="page"
+                >Bastidores</a
+              >
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main id="conteudo">
+      <!-- TOPO DA PÁGINA -->
+      <section class="pagina-topo" id="topo" aria-labelledby="pagina-titulo">
+        <div class="container">
+          <p class="rotulo rotulo--claro">Bastidores</p>
+          <h1 class="pagina-topo__titulo" id="pagina-titulo">
+            Quem faz, e o que já foi feito
+          </h1>
+          <p class="pagina-topo__texto">
+            O lado de dentro do Coema: as pessoas por trás do projeto e o
+            registro do que foi entregue até aqui.
+          </p>
+          <p class="pagina-topo__atalhos">
+            <a href="#equipe">Equipe</a>
+            <a href="#diario">Diário de bordo</a>
+          </p>
+        </div>
+      </section>
+
+      <!-- EQUIPE COMPLETA -->
+      <section class="secao" id="equipe" aria-labelledby="equipe-titulo">
+        <div class="container">
+          <header class="secao__cabecalho">
+            <p class="rotulo">Quem faz</p>
+            <h2 class="secao__titulo" id="equipe-titulo">Equipe</h2>
+            <p class="secao__intro">
+              O Coema é um projeto acadêmico desenvolvido por estudantes de
+              diferentes cursos do Sistema Ânima de Educação, no Ânima Lab HUB,
+              pela plataforma Way HUB.
+            </p>
+          </header>
+
+          <!-- EQUIPE (completa): um <li class="pessoa pessoa--completa"> por integrante.
+               Com foto:  <img class="pessoa__foto" src="img/equipe/nome.webp" width="160" height="160" alt="" />
+               Sem foto:  <span class="pessoa__foto pessoa__foto--iniciais" aria-hidden="true">AB</span>
+               Links: GitHub e LinkedIn para quem é dev; só LinkedIn para os demais. Pode ficar sem nenhum.
+          -->
+          <ul class="pessoas pessoas--completas">
+            <li class="pessoa pessoa--completa">
+              <span
+                class="pessoa__foto pessoa__foto--iniciais"
+                aria-hidden="true"
+                >FR</span
+              >
+              <div>
+                <h3 class="pessoa__nome">Fernanda Romão</h3>
+                <p class="pessoa__funcao">Idealizadora · UX e gestão</p>
+                <p class="pessoa__curso">
+                  Ciência da Computação · UNA Castelo, Belo Horizonte
+                </p>
+                <!-- BIO: duas ou três frases sobre o que faz no projeto.
+                <p class="pessoa__bio">...</p>
+                -->
+                <p class="pessoa__links">
+                  <a
+                    href="https://github.com/NandaRomao"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    >GitHub</a
+                  >
+                  <a
+                    href="https://www.linkedin.com/in/romaonanda/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    >LinkedIn</a
+                  >
+                </p>
+              </div>
+            </li>
+          </ul>
+
+          <p class="nota">
+            Os perfis dos demais integrantes entram aqui conforme forem
+            confirmados por cada um.
+          </p>
+
+          <div class="onde">
+            <h3 class="onde__titulo">Onde encontrar o projeto</h3>
+            <ul class="onde__lista">
+              <li>
+                <a
+                  href="https://github.com/NandaRomao/coema-site"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >Repositório deste site no GitHub</a
+                >
+              </li>
+              <li>
+                <a
+                  href="https://way.animahub.com.br/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >Way HUB</a
+                >
+                · Sistema Ânima de Educação
+              </li>
+              <!-- CONTATO: acrescentar o e-mail do projeto quando estiver definido:
+              <li><a href="mailto:ENDERECO">ENDERECO</a></li>
+              -->
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- DIÁRIO DE BORDO COMPLETO -->
+      <section
+        class="secao diario-secao"
+        id="diario"
+        aria-labelledby="diario-titulo"
+      >
+        <div class="container">
+          <header class="secao__cabecalho">
+            <p class="rotulo">Diário de bordo</p>
+            <h2 class="secao__titulo" id="diario-titulo">
+              O que foi feito, e quando
+            </h2>
+            <p class="secao__intro">
+              Registro aberto do andamento do projeto, atualizado pela equipe.
+            </p>
+          </header>
+
+          <div class="diario" data-diario data-fonte="data/diario.json">
+            <div
+              class="diario__filtros"
+              role="group"
+              aria-label="Filtrar registros por tipo"
+            ></div>
+            <p class="diario__status" aria-live="polite"></p>
+            <div class="diario__lista"></div>
+            <button
+              class="botao botao--escuro diario__mais"
+              type="button"
+              hidden
+            >
+              Ver registros anteriores
+            </button>
+          </div>
+
+          <noscript>
+            <p class="nota">
+              Os registros do diário aparecem com JavaScript ativado.
+            </p>
+          </noscript>
+
+          <!-- POR QUE O COEMA EXISTE: bloco discreto, fechado por padrão.
+               Para publicar, escreva o texto e apague esta linha e a linha que fecha o comentário.
+          <details class="porque">
+            <summary>Por que o Coema existe</summary>
+            <div class="porque__conteudo">
+              <p>TEXTO DA FERNANDA</p>
+              <p class="porque__assinatura">Fernanda Romão, idealizadora</p>
+            </div>
+          </details>
+          -->
+        </div>
+      </section>
+    </main>
+
+    <footer class="rodape">
+      <img
+        class="rodape__imagem"
+        src="img/cenas/morro.webp"
+        width="1200"
+        height="1101"
+        loading="lazy"
+        decoding="async"
+        alt="Ilustração de uma mulher de costas, no alto de um morro, olhando o sol nascer sobre a cidade."
+      />
+
+      <div class="container rodape__interno">
+        <p class="rodape__marca">Coema. <em>Já é dia.</em></p>
+        <p>
+          Projeto acadêmico · Ânima Lab HUB · Sistema Ânima de Educação ·
+          <span data-ano>2026</span>
+        </p>
+        <p class="rodape__aviso">
+          Este site tem caráter informativo e não oferece orientação médica. Em
+          caso de urgência, procure atendimento.
+        </p>
+        <ul class="rodape__links">
+          <li><a href="#topo">Voltar ao topo</a></li>
+          <li><a href="index.html">Página inicial</a></li>
+          <li>
+            <a
+              href="https://github.com/NandaRomao/coema-site"
+              target="_blank"
+              rel="noopener noreferrer"
+              >GitHub</a
+            >
+          </li>
+          <li>
+            <a
+              href="https://way.animahub.com.br/"
+              target="_blank"
+              rel="noopener noreferrer"
+              >Way HUB</a
+            >
+          </li>
+        </ul>
+      </div>
+    </footer>
+  </body>
+</html>

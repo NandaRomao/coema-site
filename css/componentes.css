@@ -726,3 +726,111 @@
   font-size: 0.875rem;
   color: var(--indigo);
 }
+
+/* Pessoas da equipe */
+
+.pessoas {
+  display: grid;
+  gap: var(--espaco-3);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.pessoa {
+  display: flex;
+  align-items: center;
+  gap: var(--espaco-2);
+}
+
+.pessoa__foto {
+  flex: none;
+  width: 4.5rem;
+  height: 4.5rem;
+  border: 3px solid var(--mostarda);
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.pessoa__foto--iniciais {
+  display: grid;
+  place-items: center;
+  background-color: var(--sol);
+  font-family: var(--fonte-titulo);
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--noite);
+}
+
+.pessoa__nome {
+  margin: 0;
+  font-family: var(--fonte-titulo);
+  font-size: 1.25rem;
+  font-weight: 600;
+  line-height: 1.2;
+  color: var(--noite);
+}
+
+.pessoa__funcao {
+  font-size: 0.9375rem;
+  font-weight: 600;
+  color: var(--rose-escuro);
+}
+
+.pessoa__curso,
+.pessoa__bio {
+  margin-top: 0.25rem;
+  font-size: 0.9375rem;
+}
+
+.pessoa__curso {
+  color: var(--indigo);
+}
+
+.pessoa__links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--espaco-2);
+  margin-top: var(--espaco-1);
+  font-size: 0.9375rem;
+  font-weight: 600;
+}
+
+.pessoas--completas {
+  gap: var(--espaco-4);
+}
+
+@media (min-width: 52rem) {
+  .pessoas--completas {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.pessoa--completa {
+  align-items: flex-start;
+  padding: var(--espaco-3);
+  background-color: #fff;
+  border: 1px solid var(--lavanda-clara);
+  border-radius: var(--raio);
+}
+
+.pessoa--completa .pessoa__foto {
+  width: 6rem;
+  height: 6rem;
+}
+
+/* Diário em modo resumo (página principal) */
+
+.diario--resumo .diario__status:empty {
+  display: none;
+}
+
+.diario--resumo .registros {
+  gap: var(--espaco-3);
+}
+
+/* Item do menu que corresponde à página aberta */
+
+.menu__link[aria-current="page"] {
+  border-bottom-color: var(--mostarda);
+}

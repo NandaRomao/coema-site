@@ -477,3 +477,86 @@
   background-color: #fff;
   border-left-color: var(--rose-escuro);
 }
+
+/* Página principal: resumo "Quem faz" */
+
+.quem {
+  background-color: var(--papel-sombra);
+}
+
+.quem__grade {
+  display: grid;
+  gap: var(--espaco-5);
+}
+
+@media (min-width: 52rem) {
+  .quem__grade {
+    grid-template-columns: 5fr 7fr;
+  }
+}
+
+.quem__subtitulo {
+  margin-bottom: var(--espaco-3);
+  font-size: var(--titulo-3);
+  color: var(--noite);
+}
+
+.quem__acao {
+  margin-top: var(--espaco-5);
+}
+
+/* Página Bastidores */
+
+.pagina-topo {
+  background-color: var(--noite);
+  background-image: linear-gradient(180deg, var(--noite) 0%, var(--indigo) 100%);
+  color: var(--papel);
+  padding-block: clamp(3rem, 2rem + 4vw, 5rem);
+}
+
+.pagina-topo__titulo {
+  margin-top: var(--espaco-1);
+  font-size: clamp(2.25rem, 1.6rem + 3vw, 3.75rem);
+  font-weight: 500;
+  line-height: 1.05;
+}
+
+.pagina-topo__texto {
+  margin-top: var(--espaco-3);
+  max-width: 40rem;
+  font-size: var(--texto-g);
+  color: var(--lavanda-clara);
+}
+
+.pagina-topo__atalhos {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--espaco-3);
+  margin-top: var(--espaco-3);
+  font-weight: 600;
+}
+
+.pagina-topo__atalhos a {
+  color: var(--sol);
+}
+
+.onde {
+  margin-top: var(--espaco-5);
+}
+
+.onde__titulo {
+  margin-bottom: var(--espaco-2);
+  font-size: var(--titulo-3);
+  color: var(--noite);
+}
+
+.onde__lista {
+  display: grid;
+  gap: var(--espaco-1);
+  padding: 0;
+  list-style: none;
+}
+
+.diario-secao {
+  background-color: var(--papel-sombra);
+}
