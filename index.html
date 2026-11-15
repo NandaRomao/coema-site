@@ -562,12 +562,66 @@
             <h3 class="fase__titulo">MVP</h3>
             <p>Check-in diário, triagem em três níveis e histórico compartilhado por token, para validação com profissionais de saúde.</p>
           </li>
-          <li class="fase">
+                    <li class="fase">
             <p class="fase__quando">Visão</p>
-            <h3 class="fase__titulo">Outras doenças crônicas</h3>
-            <p>Acompanhamento contínuo para outras doenças crônicas, integrado aos serviços de saúde que atendem o paciente.</p>
+            <h3 class="fase__titulo">Um cuidado mais amplo</h3>
+            <p>O que queremos alcançar depois do MVP:</p>
+            <ul class="lista lista--resposta fase__lista">
+              <li><strong>Outras doenças crônicas</strong>, além do lúpus.</li>
+              <li><strong>Saúde mental:</strong> acompanhamento do bem-estar emocional e apoio psicológico como parte do cuidado.</li>
+              <li><strong>Atividade física:</strong> incentivo e acompanhamento de movimento adequado a cada condição, com orientação profissional.</li>
+              <li><strong>Internet das Coisas:</strong> leitura de dispositivos como relógios e medidores de pressão, glicemia e temperatura, com autorização do paciente e segundo orientação médica.</li>
+              <li><strong>Integração</strong> com os serviços de saúde que atendem o paciente.</li>
+            </ul>
           </li>
         </ol>
+      </div>
+    </section>
+
+        <!-- SEÇÃO 10: DIÁRIO DE BORDO -->
+    <section class="secao diario-secao" id="diario" aria-labelledby="diario-titulo">
+      <div class="container">
+        <header class="secao__cabecalho">
+          <p class="rotulo">Diário de bordo</p>
+          <h2 class="secao__titulo" id="diario-titulo">O que foi feito, e quando</h2>
+          <p class="secao__intro">Registro aberto do andamento do projeto, atualizado pela equipe.</p>
+        </header>
+
+        <div class="diario" data-diario data-fonte="data/diario.json">
+          <div class="diario__filtros" role="group" aria-label="Filtrar registros por tipo"></div>
+          <p class="diario__status" aria-live="polite"></p>
+          <div class="diario__lista"></div>
+          <button class="botao botao--escuro diario__mais" type="button" hidden>Ver registros anteriores</button>
+        </div>
+
+        <noscript>
+          <ol class="registros">
+            <li class="registro">
+              <article>
+                <time class="registro__data" datetime="2026-11-14">14 de novembro de 2026</time>
+                <h3 class="registro__titulo">Site no ar</h3>
+                <p>Publicação da primeira versão deste site.</p>
+                <p class="registro__meta">Fernanda Romão · Desenvolvimento</p>
+              </article>
+            </li>
+            <li class="registro">
+              <article>
+                <time class="registro__data" datetime="2026-11-11">11 de novembro de 2026</time>
+                <h3 class="registro__titulo">Filme de apresentação</h3>
+                <p>Finalização do filme de 15 segundos "Coema: já é dia".</p>
+                <p class="registro__meta">Fernanda Romão · Design</p>
+              </article>
+            </li>
+            <li class="registro">
+              <article>
+                <time class="registro__data" datetime="2026-11-10">10 de novembro de 2026</time>
+                <h3 class="registro__titulo">Identidade visual e personagem</h3>
+                <p>Definição da paleta e criação da Lia, que acompanha a história do projeto.</p>
+                <p class="registro__meta">Fernanda Romão · Design</p>
+              </article>
+            </li>
+          </ol>
+        </noscript>
       </div>
     </section>
 

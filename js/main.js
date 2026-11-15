@@ -1,4 +1,5 @@
 import { iniciarTriagemDemo } from "./triagem-demo.js";
+import { iniciarDiario } from "./diario.js";
 
 // Ponto de entrada. Cada função cuida de uma parte da página.
 

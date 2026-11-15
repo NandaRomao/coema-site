@@ -597,3 +597,132 @@
   font-weight: 600;
   color: var(--noite);
 }
+.fase__lista {
+  margin-top: var(--espaco-2);
+  gap: var(--espaco-1);
+  font-size: 0.9375rem;
+}
+/* Botão escuro, para fundos claros */
+
+.botao--escuro {
+  background-color: var(--noite);
+  color: var(--papel);
+  font: inherit;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.botao--escuro:hover {
+  background-color: var(--indigo);
+}
+
+/* Diário de bordo */
+
+.diario__filtros {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--espaco-1);
+}
+
+.diario__filtro {
+  padding: 0.4rem 0.9rem;
+  background-color: transparent;
+  border: 1px solid var(--lavanda);
+  border-radius: 999px;
+  color: var(--grafite);
+  font: inherit;
+  font-size: 0.9375rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.diario__filtro:hover {
+  background-color: var(--papel-sombra);
+}
+
+.diario__filtro[aria-pressed="true"] {
+  background-color: var(--noite);
+  border-color: var(--noite);
+  color: var(--papel);
+}
+
+.diario__status {
+  margin-top: var(--espaco-2);
+  font-size: 0.875rem;
+  color: var(--indigo);
+}
+
+.diario__mes {
+  margin: var(--espaco-4) 0 var(--espaco-3);
+  font-size: var(--titulo-3);
+  color: var(--noite);
+}
+
+.diario__mais {
+  margin-top: var(--espaco-4);
+}
+
+.diario__mais[hidden] {
+  display: none;
+}
+
+/* Linha do tempo dos registros */
+
+.registros {
+  display: grid;
+  gap: var(--espaco-4);
+  max-width: 44rem;
+  margin: 0;
+  padding: 0 0 0 var(--espaco-3);
+  border-left: 2px solid var(--lavanda);
+  list-style: none;
+}
+
+.registro {
+  position: relative;
+}
+
+.registro::before {
+  content: "";
+  position: absolute;
+  left: calc(-1 * var(--espaco-3) - 0.4375rem);
+  top: 0.4rem;
+  width: 0.75rem;
+  height: 0.75rem;
+  background-color: var(--mostarda);
+  border: 2px solid var(--papel);
+  border-radius: 50%;
+}
+
+.registro article:focus {
+  outline: none;
+}
+
+.registro article:focus-visible {
+  outline: 3px solid var(--mostarda);
+  outline-offset: 6px;
+}
+
+.registro__data {
+  font-size: 0.8125rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--rose-escuro);
+}
+
+.registro__titulo {
+  margin: 0.15rem 0 var(--espaco-1);
+  font-family: var(--fonte-titulo);
+  font-size: 1.25rem;
+  font-weight: 600;
+  line-height: 1.25;
+  color: var(--noite);
+}
+
+.registro__meta {
+  margin-top: var(--espaco-1);
+  font-size: 0.875rem;
+  color: var(--indigo);
+}

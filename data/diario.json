@@ -1,0 +1,23 @@
+[
+  {
+    "data": "2026-11-14",
+    "titulo": "Site no ar",
+    "texto": "Publicação da primeira versão deste site.",
+    "autor": "Fernanda Romão",
+    "tag": "desenvolvimento"
+  },
+  {
+    "data": "2026-11-11",
+    "titulo": "Filme de apresentação",
+    "texto": "Finalização do filme de 15 segundos \"Coema: já é dia\".",
+    "autor": "Fernanda Romão",
+    "tag": "design"
+  },
+  {
+    "data": "2026-11-10",
+    "titulo": "Identidade visual e personagem",
+    "texto": "Definição da paleta e criação da Lia, que acompanha a história do projeto.",
+    "autor": "Fernanda Romão",
+    "tag": "design"
+  }
+]
