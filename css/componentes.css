@@ -834,3 +834,35 @@
 .menu__link[aria-current="page"] {
   border-bottom-color: var(--mostarda);
 }
+/* Caixa pessoal: por que o Coema existe */
+
+.historia {
+  max-width: 46rem;
+  margin-top: var(--espaco-4);
+  padding: var(--espaco-3) var(--espaco-4);
+  background-color: var(--lavanda-rosada);
+  border: 1px solid var(--lavanda-rosada-borda);
+  border-radius: var(--raio);
+}
+
+.historia__titulo {
+  margin-bottom: var(--espaco-2);
+  font-family: var(--fonte-titulo);
+  font-size: var(--titulo-3);
+  color: var(--rose-escuro);
+}
+
+.historia p + p {
+  margin-top: var(--espaco-2);
+}
+
+.historia__assinatura {
+  font-style: italic;
+  color: var(--indigo);
+}
+
+@media (max-width: 47.99rem) {
+  .historia {
+    padding: var(--espaco-3);
+  }
+}
